@@ -1,80 +1,75 @@
-# AISensy Credits Scraper
+# AISensy Campaign Details Scraper
 
-Automatically scrapes credit information from AISensy dashboard and sends it to Slack.
+This project automatically scrapes campaign details from the AISensy dashboard, processes them, and sends the data to Slack.
 
 ## Features
 
-- API endpoint `/credits` to trigger credit scraping on demand
-- Automatic credit checks every 4 hours via cron job
-- Slack integration to send credit updates when balance falls below 4500
-- Automatic re-login if session expires
-- Compatible with Vercel deployment
+- Automated login to AISensy dashboard
+- API-based scraping of campaign details
+- Filtering of campaigns by type and status
+- CSV generation for reporting
+- Automatic Slack notification with campaign data
+- Scheduled daily runs (12:00 AM IST)
 
 ## Setup
 
-1. Install dependencies:
+### Prerequisites
+
+- Node.js 16+
+- npm
+- Slack workspace with permissions to create a bot or webhook
+
+### Environment Variables
+
+Create a `.env` file with the following variables:
+
+```
+EMAIL=your-aisensy-email
+PASSWORD=your-aisensy-password
+LOGIN_URL=https://www.app.aisensy.com/login
+ASSISTANT_ID=your-assistant-id
+SLACK_BOT_TOKEN=xoxb-your-slack-bot-token
+SLACK_CHANNEL_ID=C0123ABCDEF
+SLACK_WEBHOOK_URL=https://hooks.slack.com/services/xxx/yyy/zzz
+PORT=3000
+```
+
+### Installation
+
+1. Clone the repository
+2. Install dependencies:
    ```
    npm install
    ```
-
-2. Configure environment variables:
-   ```
-   cp .env.example .env
-   ```
-   
-   Then edit the `.env` file with your credentials.
-
-3. Start the application:
+3. Run the script:
    ```
    npm start
    ```
 
-## Deployment to Vercel
+## API Endpoints
 
-1. Make sure your code is in a GitHub repository (e.g., https://github.com/trojan5x/aisensy-scrape)
+- `GET /campaigns` - Fetch latest campaign details
+- `GET /api/cron-check` - Trigger a manual update
 
-2. Go to [Vercel](https://vercel.com/) and sign up/login
+## Deployment on Railway
 
-3. Click "New Project" and import your GitHub repository
+This project is configured for deployment on Railway.app:
 
-4. Configure the project:
-   - Set the Framework Preset to "Other"
-   - Set Root Directory to "/"
-   - Set Build Command to "npm install"
-   - Set Output Directory to "/"
+1. Create a new project on Railway
+2. Link to your GitHub repository
+3. Add the environment variables
+4. Deploy
 
-5. Set up environment variables:
-   - `EMAIL` - Your AISensy login email
-   - `PASSWORD` - Your AISensy login password
-   - `LOGIN_URL` - The login URL (https://www.app.aisensy.com/login)
-   - `ASSISTANT_ID` - Your AISensy assistant ID
-   - `CRON_SECRET` - A secret key for securing the cron endpoint (optional)
+The application will automatically run the scraper at 12:00 AM IST daily and send reports to Slack.
 
-6. Deploy the project
+## Slack Integration
 
-7. Set up cron job with Vercel Cron:
-   - Go to your project settings
-   - Click on "Cron Jobs"
-   - Add a new cron job
-   - Set the schedule to run hourly (e.g., `0 * * * *`)
-   - Set the HTTP endpoint to `/api/cron-check`
-   - Set the HTTP method to GET
-   - Add the header `x-vercel-cron-secret` with your secret value (if configured)
+The application supports two methods for sending data to Slack:
 
-## Usage
+1. **Bot Token Method** (recommended):
+   - Requires `SLACK_BOT_TOKEN` and `SLACK_CHANNEL_ID`
+   - Sends proper file attachments to the specified channel
 
-- **API access**: Access `https://your-project.railway.app/credits` to trigger credit scraping on demand
-- **Automatic updates**: The app checks for credits every 4 hours and posts alerts to Slack when credits fall below 4500
-- **Manual check**: Railway's dashboard lets you view logs to see the latest credit values
-- **Cron job**: The `/api/cron-check` endpoint will be called automatically on your specified schedule
-- **Local development**: Run `npm start` to start the server locally
-
-Note: Vercel has a serverless architecture, so the app doesn't run continuously. The cron job will call the endpoint at the scheduled time to trigger the credit scraping.
-
-## Important Notes for Vercel Deployment
-
-1. **Browser automation**: Vercel's serverless environment may have limitations with headless browsers. If you encounter issues, consider alternatives like Render or Railway.
-
-2. **Session persistence**: Since Vercel instances are ephemeral, sessions will not persist between invocations. The app is designed to handle this by re-logging in when needed.
-
-3. **Execution time**: Vercel has a maximum execution time of 60 seconds for the free tier. If your scraping takes longer, consider upgrading to a paid plan or using a different hosting provider. 
+2. **Webhook Method**:
+   - Requires only `SLACK_WEBHOOK_URL`
+   - Sends data as a formatted message to the webhook's channel 
