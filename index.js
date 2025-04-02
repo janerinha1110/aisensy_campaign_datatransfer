@@ -91,24 +91,36 @@ app.listen(PORT, () => {
 async function login() {
   console.log('Starting login process...');
   const browser = await chromium.launch({ 
-    headless: false, 
+    headless: true, // Change to true for server environments
     args: [
       '--no-sandbox',
       '--disable-setuid-sandbox',
       '--disable-dev-shm-usage',
       '--disable-gpu',
-      '--single-process'
+      '--single-process',
+      '--disable-accelerated-2d-canvas',
+      '--no-first-run',
+      '--no-zygote',
+      '--disable-dev-profile'
     ]
   });
-  const context = await browser.newContext();
+  const context = await browser.newContext({
+    userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+  });
   const page = await context.newPage();
 
   try {
     // Navigate to login page
-    await page.goto(process.env.LOGIN_URL, { waitUntil: 'networkidle' });
+    console.log(`Navigating to login page: ${process.env.LOGIN_URL}`);
+    await page.goto(process.env.LOGIN_URL, { waitUntil: 'networkidle', timeout: 60000 });
     console.log('Navigated to login page');
 
+    // Take screenshot for debugging
+    await page.screenshot({ path: 'login-page-debug.png' });
+    console.log('Login page screenshot saved');
+
     // Fill login form
+    console.log(`Filling login form with email: ${process.env.EMAIL}`);
     await page.fill('input[type="email"]', process.env.EMAIL);
     await page.fill('input[type="password"]', process.env.PASSWORD);
     
@@ -130,12 +142,13 @@ async function login() {
     // Try each selector until we find a visible button
     let buttonFound = false;
     for (const selector of buttonSelectors) {
+      console.log(`Trying to find login button with selector: ${selector}`);
       const button = await page.$(selector);
       if (button && await button.isVisible()) {
         console.log(`Found login button with selector: ${selector}`);
         // Click button and wait for navigation
         await Promise.all([
-          page.waitForNavigation({ waitUntil: 'networkidle' }),
+          page.waitForNavigation({ waitUntil: 'networkidle', timeout: 60000 }),
           button.click()
         ]);
         buttonFound = true;
@@ -150,7 +163,7 @@ async function login() {
       if (continueButtons.length >= 2) {
         console.log('Found multiple Continue buttons, clicking the second one');
         await Promise.all([
-          page.waitForNavigation({ waitUntil: 'networkidle' }),
+          page.waitForNavigation({ waitUntil: 'networkidle', timeout: 60000 }),
           continueButtons[1].click()
         ]);
       } else {
@@ -160,17 +173,19 @@ async function login() {
         if (formButtons.length > 0) {
           const lastButton = formButtons[formButtons.length - 1];
           await Promise.all([
-            page.waitForNavigation({ waitUntil: 'networkidle' }),
+            page.waitForNavigation({ waitUntil: 'networkidle', timeout: 60000 }),
             lastButton.click()
           ]);
         } else {
-          // If that fails, try taking a screenshot to debug
-          await page.screenshot({ path: 'login-debug.png' });
+          // If that fails, take another screenshot to debug
+          await page.screenshot({ path: 'login-failed-debug.png' });
           throw new Error('Could not find the login button with any selector');
         }
       }
     }
     
+    // Take a screenshot after login to verify
+    await page.screenshot({ path: 'post-login-debug.png' });
     console.log('Login successful');
 
     // Store authentication state
@@ -191,6 +206,9 @@ async function login() {
 
   } catch (error) {
     console.error('Login failed:', error);
+    // Take final error screenshot
+    await page.screenshot({ path: 'login-error-debug.png' });
+    throw error; // Rethrow to be handled by caller
   } finally {
     await browser.close();
   }
