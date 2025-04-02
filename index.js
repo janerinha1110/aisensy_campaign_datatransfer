@@ -15,6 +15,12 @@ const FILTERED_CAMPAIGNS_PATH = path.join(__dirname, 'filtered-campaigns.json');
 const CAMPAIGN_DETAILS_OUTPUT_PATH = path.join(__dirname, 'campaign-details-output.json');
 const CAMPAIGN_DETAILS_CSV_PATH = path.join(__dirname, 'campaign-details.csv');
 
+// Detect Railway environment
+if (process.env.RAILWAY_STATIC_URL || process.env.RAILWAY_SERVICE_ID || process.env.RAILWAY_PROJECT_ID) {
+  process.env.RAILWAY_ENVIRONMENT = 'production';
+  console.log('Running in Railway environment');
+}
+
 // Create Express server
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -90,8 +96,10 @@ app.listen(PORT, () => {
 
 async function login() {
   console.log('Starting login process...');
-  const browser = await chromium.launch({ 
-    headless: true, // Change to true for server environments
+  
+  // Add environment-specific browser launch options
+  const launchOptions = {
+    headless: true,
     args: [
       '--no-sandbox',
       '--disable-setuid-sandbox',
@@ -101,116 +109,147 @@ async function login() {
       '--disable-accelerated-2d-canvas',
       '--no-first-run',
       '--no-zygote',
-      '--disable-dev-profile'
-    ]
-  });
-  const context = await browser.newContext({
-    userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
-  });
-  const page = await context.newPage();
-
+      '--disable-dev-profile',
+      '--disable-extensions',
+      '--disable-features=site-per-process',
+      '--disable-software-rasterizer',
+      '--window-size=1440,900'
+    ],
+    firefoxUserPrefs: {
+      'media.navigator.streams.fake': true,
+      'permissions.default.microphone': 1,
+      'permissions.default.camera': 1
+    },
+    chromiumSandbox: false,
+    handleSIGINT: false,  // Avoid Docker termination issues
+    timeout: 120000       // 2 minute timeout for browser launch
+  };
+  
+  console.log(`Launching browser with options: ${JSON.stringify(launchOptions, null, 2)}`);
+  let browser;
   try {
-    // Navigate to login page
-    console.log(`Navigating to login page: ${process.env.LOGIN_URL}`);
-    await page.goto(process.env.LOGIN_URL, { waitUntil: 'networkidle', timeout: 60000 });
-    console.log('Navigated to login page');
-
-    // Take screenshot for debugging
-    await page.screenshot({ path: 'login-page-debug.png' });
-    console.log('Login page screenshot saved');
-
-    // Fill login form
-    console.log(`Filling login form with email: ${process.env.EMAIL}`);
-    await page.fill('input[type="email"]', process.env.EMAIL);
-    await page.fill('input[type="password"]', process.env.PASSWORD);
+    browser = await chromium.launch(launchOptions);
+    console.log('Browser launched successfully');
     
-    // Try multiple selectors to find the login button
-    const buttonSelectors = [
-      // Try to select the second Continue button specifically
-      ':nth-match(button:has-text("Continue"), 2)',
-      'button.MuiButton-contained:has-text("Continue")', 
-      'button.MuiButton-root:has-text("Continue")',
-      'button[type="submit"]',
-      'button:has-text("Login")',
-      'button:has-text("Sign in")',
-      '.login-button',
-      'form button',
-      'button.MuiButton-contained',
-      'button.MuiButton-root'
-    ];
-    
-    // Try each selector until we find a visible button
-    let buttonFound = false;
-    for (const selector of buttonSelectors) {
-      console.log(`Trying to find login button with selector: ${selector}`);
-      const button = await page.$(selector);
-      if (button && await button.isVisible()) {
-        console.log(`Found login button with selector: ${selector}`);
-        // Click button and wait for navigation
-        await Promise.all([
-          page.waitForNavigation({ waitUntil: 'networkidle', timeout: 60000 }),
-          button.click()
-        ]);
-        buttonFound = true;
-        break;
+    const context = await browser.newContext({
+      userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+      viewport: { width: 1440, height: 900 },
+      ignoreHTTPSErrors: true,
+      extraHTTPHeaders: {
+        'Accept-Language': 'en-US,en;q=0.9'
       }
-    }
+    });
+    console.log('Browser context created');
     
-    if (!buttonFound) {
-      // Try to get all Continue buttons and click the second one
-      console.log('Trying to click second Continue button...');
-      const continueButtons = await page.$$('button:has-text("Continue")');
-      if (continueButtons.length >= 2) {
-        console.log('Found multiple Continue buttons, clicking the second one');
-        await Promise.all([
-          page.waitForNavigation({ waitUntil: 'networkidle', timeout: 60000 }),
-          continueButtons[1].click()
-        ]);
-      } else {
-        // As a fallback, try clicking the last button in the form
-        console.log('Trying to click the last button in the form...');
-        const formButtons = await page.$$('form button');
-        if (formButtons.length > 0) {
-          const lastButton = formButtons[formButtons.length - 1];
+    const page = await context.newPage();
+    console.log('New page created');
+
+    try {
+      // Navigate to login page
+      console.log(`Navigating to login page: ${process.env.LOGIN_URL}`);
+      await page.goto(process.env.LOGIN_URL, { waitUntil: 'networkidle', timeout: 60000 });
+      console.log('Navigated to login page');
+
+      // Take screenshot for debugging
+      await page.screenshot({ path: 'login-page-debug.png' });
+      console.log('Login page screenshot saved');
+
+      // Fill login form
+      console.log(`Filling login form with email: ${process.env.EMAIL}`);
+      await page.fill('input[type="email"]', process.env.EMAIL);
+      await page.fill('input[type="password"]', process.env.PASSWORD);
+      
+      // Try multiple selectors to find the login button
+      const buttonSelectors = [
+        // Try to select the second Continue button specifically
+        ':nth-match(button:has-text("Continue"), 2)',
+        'button.MuiButton-contained:has-text("Continue")', 
+        'button.MuiButton-root:has-text("Continue")',
+        'button[type="submit"]',
+        'button:has-text("Login")',
+        'button:has-text("Sign in")',
+        '.login-button',
+        'form button',
+        'button.MuiButton-contained',
+        'button.MuiButton-root'
+      ];
+      
+      // Try each selector until we find a visible button
+      let buttonFound = false;
+      for (const selector of buttonSelectors) {
+        console.log(`Trying to find login button with selector: ${selector}`);
+        const button = await page.$(selector);
+        if (button && await button.isVisible()) {
+          console.log(`Found login button with selector: ${selector}`);
+          // Click button and wait for navigation
           await Promise.all([
             page.waitForNavigation({ waitUntil: 'networkidle', timeout: 60000 }),
-            lastButton.click()
+            button.click()
           ]);
-        } else {
-          // If that fails, take another screenshot to debug
-          await page.screenshot({ path: 'login-failed-debug.png' });
-          throw new Error('Could not find the login button with any selector');
+          buttonFound = true;
+          break;
         }
       }
+      
+      if (!buttonFound) {
+        // Try to get all Continue buttons and click the second one
+        console.log('Trying to click second Continue button...');
+        const continueButtons = await page.$$('button:has-text("Continue")');
+        if (continueButtons.length >= 2) {
+          console.log('Found multiple Continue buttons, clicking the second one');
+          await Promise.all([
+            page.waitForNavigation({ waitUntil: 'networkidle', timeout: 60000 }),
+            continueButtons[1].click()
+          ]);
+        } else {
+          // As a fallback, try clicking the last button in the form
+          console.log('Trying to click the last button in the form...');
+          const formButtons = await page.$$('form button');
+          if (formButtons.length > 0) {
+            const lastButton = formButtons[formButtons.length - 1];
+            await Promise.all([
+              page.waitForNavigation({ waitUntil: 'networkidle', timeout: 60000 }),
+              lastButton.click()
+            ]);
+          } else {
+            // If that fails, take another screenshot to debug
+            await page.screenshot({ path: 'login-failed-debug.png' });
+            throw new Error('Could not find the login button with any selector');
+          }
+        }
+      }
+      
+      // Take a screenshot after login to verify
+      await page.screenshot({ path: 'post-login-debug.png' });
+      console.log('Login successful');
+
+      // Store authentication state
+      await context.storageState({ path: STORAGE_STATE_PATH });
+      
+      // Save session expiry time (24 hours from now)
+      const expiryTime = new Date();
+      expiryTime.setHours(expiryTime.getHours() + 24);
+      fs.writeFileSync(
+        SESSION_EXPIRY_PATH,
+        JSON.stringify({ expiry: expiryTime.toISOString() })
+      );
+      
+      console.log('Session saved, will expire at:', expiryTime);
+      
+      // After login, immediately scrape campaign information
+      await scrapeCampaignDetails(context);
+
+    } catch (error) {
+      console.error('Login failed:', error);
+      // Take final error screenshot
+      await page.screenshot({ path: 'login-error-debug.png' });
+      throw error; // Rethrow to be handled by caller
+    } finally {
+      await browser.close();
     }
-    
-    // Take a screenshot after login to verify
-    await page.screenshot({ path: 'post-login-debug.png' });
-    console.log('Login successful');
-
-    // Store authentication state
-    await context.storageState({ path: STORAGE_STATE_PATH });
-    
-    // Save session expiry time (24 hours from now)
-    const expiryTime = new Date();
-    expiryTime.setHours(expiryTime.getHours() + 24);
-    fs.writeFileSync(
-      SESSION_EXPIRY_PATH,
-      JSON.stringify({ expiry: expiryTime.toISOString() })
-    );
-    
-    console.log('Session saved, will expire at:', expiryTime);
-    
-    // After login, immediately scrape campaign information
-    await scrapeCampaignDetails(context);
-
   } catch (error) {
-    console.error('Login failed:', error);
-    // Take final error screenshot
-    await page.screenshot({ path: 'login-error-debug.png' });
+    console.error('Error launching browser:', error);
     throw error; // Rethrow to be handled by caller
-  } finally {
-    await browser.close();
   }
 }
 
@@ -560,15 +599,52 @@ cron.schedule('30 18 * * *', async () => {
 console.log('Server started, initializing first campaign detail check...');
 (async () => {
   try {
-    if (isSessionValid()) {
+    // In production environment like Railway, force a new login on each startup
+    if (process.env.RAILWAY_ENVIRONMENT === 'production' || !isSessionValid()) {
+      console.log('Running in Railway or no valid session found, performing fresh login...');
+      try {
+        // Delete any existing auth files to ensure fresh login
+        if (fs.existsSync(STORAGE_STATE_PATH)) {
+          fs.unlinkSync(STORAGE_STATE_PATH);
+          console.log('Removed existing auth.json file');
+        }
+        if (fs.existsSync(SESSION_EXPIRY_PATH)) {
+          fs.unlinkSync(SESSION_EXPIRY_PATH);
+          console.log('Removed existing session-expiry.json file');
+        }
+        
+        // Perform login with retry mechanism
+        let loginAttempts = 0;
+        const maxLoginAttempts = 3;
+        
+        while (loginAttempts < maxLoginAttempts) {
+          try {
+            console.log(`Login attempt ${loginAttempts + 1}/${maxLoginAttempts}...`);
+            await login();
+            console.log('Login successful!');
+            break; // Exit the retry loop if login succeeds
+          } catch (loginError) {
+            loginAttempts++;
+            console.error(`Login attempt ${loginAttempts} failed:`, loginError.message);
+            
+            if (loginAttempts < maxLoginAttempts) {
+              // Wait before next attempt (increasing backoff)
+              const waitTime = 5000 * loginAttempts;
+              console.log(`Waiting ${waitTime/1000} seconds before next login attempt...`);
+              await new Promise(resolve => setTimeout(resolve, waitTime));
+            } else {
+              console.error('All login attempts failed. Cannot proceed with campaign scraping.');
+              throw new Error('Failed to login after multiple attempts');
+            }
+          }
+        }
+      } catch (loginErr) {
+        console.error('Error during login process:', loginErr);
+      }
+    } else {
       console.log('Using existing session for initial check');
       await scrapeCampaignDetails().catch(err => {
         console.error('Error in initial campaign detail check:', err);
-      });
-    } else {
-      console.log('No valid session found, logging in...');
-      await login().catch(err => {
-        console.error('Error during initial login:', err);
       });
     }
   } catch (error) {
