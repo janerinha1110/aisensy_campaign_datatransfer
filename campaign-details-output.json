@@ -6,34 +6,36 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:40:09.217Z"
+  "timestamp": "2025-04-02T18:50:17.536Z",
+  "note": "No chat data found in API response for the specified date range."
 },
 {
   "campaignName": "project_code_based_users",
   "campaignId": "67e7b5c3f1511309c38e59f2",
   "sent": 0,
   "delivered": 0,
-  "read": 1,
+  "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:40:10.249Z"
+  "timestamp": "2025-04-02T18:50:18.578Z",
+  "note": "No chat data found in API response for the specified date range."
 },
 {
   "campaignName": "cert_value_bot_t1_v2",
   "campaignId": "67e6ae1d7d4c543806f2f839",
   "sent": 0,
-  "delivered": 29,
-  "read": 124,
+  "delivered": 1,
+  "read": 5,
   "failed": 0,
-  "timestamp": "2025-04-02T14:40:11.282Z"
+  "timestamp": "2025-04-02T18:50:19.633Z"
 },
 {
   "campaignName": "cert_purchase_report_2_skill_v4",
   "campaignId": "67e563de53b82209c60e7b17",
-  "sent": 86,
-  "delivered": 82,
-  "read": 67,
-  "failed": 2,
-  "timestamp": "2025-04-02T14:40:12.303Z"
+  "sent": 3,
+  "delivered": 3,
+  "read": 3,
+  "failed": 0,
+  "timestamp": "2025-04-02T18:50:20.689Z"
 },
 {
   "campaignName": "credibility_bot_v1_t1_unpaid",
@@ -42,17 +44,18 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:40:13.341Z",
+  "timestamp": "2025-04-02T18:50:21.761Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
   "campaignName": "cert_value_bot_t1_cta_v1",
   "campaignId": "67e41049e546bc09c8beca6e",
-  "sent": 1,
-  "delivered": 1,
-  "read": 1,
+  "sent": 0,
+  "delivered": 0,
+  "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:40:14.381Z"
+  "timestamp": "2025-04-02T18:50:22.819Z",
+  "note": "No chat data found in API response for the specified date range."
 },
 {
   "campaignName": "personalised_bundle_attempted",
@@ -61,35 +64,35 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:40:15.434Z",
+  "timestamp": "2025-04-02T18:50:23.874Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
   "campaignName": "cert_purchase_report_2_job_v3",
   "campaignId": "67e24320907f7109caf1be59",
-  "sent": 190,
-  "delivered": 187,
-  "read": 152,
-  "failed": 1,
-  "timestamp": "2025-04-02T14:40:16.463Z"
+  "sent": 3,
+  "delivered": 2,
+  "read": 3,
+  "failed": 0,
+  "timestamp": "2025-04-02T18:50:24.920Z"
 },
 {
   "campaignName": "day_2_final_discount_job_v3",
   "campaignId": "67e17dda9445ca09c74ba6a7",
   "sent": 0,
-  "delivered": 2,
-  "read": 17,
+  "delivered": 0,
+  "read": 1,
   "failed": 0,
-  "timestamp": "2025-04-02T14:40:17.490Z"
+  "timestamp": "2025-04-02T18:50:25.966Z"
 },
 {
   "campaignName": "day_2_final_discount_skill_v3",
   "campaignId": "67e17bb372868c09c89af7ed",
   "sent": 0,
-  "delivered": 1,
-  "read": 9,
+  "delivered": 0,
+  "read": 1,
   "failed": 0,
-  "timestamp": "2025-04-02T14:40:18.515Z"
+  "timestamp": "2025-04-02T18:50:27.006Z"
 },
 {
   "campaignName": "cert_purchase_report_2_job_v2",
@@ -98,7 +101,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:40:19.546Z",
+  "timestamp": "2025-04-02T18:50:28.055Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -108,7 +111,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:40:20.569Z",
+  "timestamp": "2025-04-02T18:50:29.106Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -116,27 +119,28 @@
   "campaignId": "67dc062d8c733509c899eb0e",
   "sent": 0,
   "delivered": 0,
-  "read": 7,
+  "read": 1,
   "failed": 0,
-  "timestamp": "2025-04-02T14:40:21.602Z"
+  "timestamp": "2025-04-02T18:50:30.150Z"
 },
 {
   "campaignName": "certified_day_1_goal_not_given_v2",
   "campaignId": "67dc03d5fcb94f09c96c8933",
   "sent": 0,
-  "delivered": 1,
-  "read": 3,
+  "delivered": 0,
+  "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:40:22.627Z"
+  "timestamp": "2025-04-02T18:50:31.189Z",
+  "note": "No chat data found in API response for the specified date range."
 },
 {
   "campaignName": "certified_day_1_attempt_skill_v1",
   "campaignId": "67dc0130700bb209c9b82023",
   "sent": 0,
   "delivered": 0,
-  "read": 5,
+  "read": 2,
   "failed": 0,
-  "timestamp": "2025-04-02T14:40:23.653Z"
+  "timestamp": "2025-04-02T18:50:32.233Z"
 },
 {
   "campaignName": "day_2_final_discount_skill_v2",
@@ -145,26 +149,27 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:40:24.767Z",
+  "timestamp": "2025-04-02T18:50:33.285Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
   "campaignName": "certified_day_0_goal_not_given_v1",
   "campaignId": "67dacffb0697a809c3e2d48f",
-  "sent": 52,
-  "delivered": 52,
-  "read": 43,
+  "sent": 2,
+  "delivered": 2,
+  "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:40:25.796Z"
+  "timestamp": "2025-04-02T18:50:34.352Z"
 },
 {
   "campaignName": "certified_day_1_no_interaction_job_v2",
   "campaignId": "67d7d5c7dbe2cc09c4524d8c",
   "sent": 0,
-  "delivered": 1,
-  "read": 31,
+  "delivered": 0,
+  "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:40:26.823Z"
+  "timestamp": "2025-04-02T18:50:35.397Z",
+  "note": "No chat data found in API response for the specified date range."
 },
 {
   "campaignName": "certified_day_1_goal_not_given_v1",
@@ -173,7 +178,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:40:27.848Z",
+  "timestamp": "2025-04-02T18:50:36.436Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -183,7 +188,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:40:28.877Z",
+  "timestamp": "2025-04-02T18:50:37.477Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -193,7 +198,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:40:29.908Z",
+  "timestamp": "2025-04-02T18:50:38.528Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -201,18 +206,20 @@
   "campaignId": "67d28c7ee8084e09c5527add",
   "sent": 0,
   "delivered": 0,
-  "read": 3,
+  "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:40:30.938Z"
+  "timestamp": "2025-04-02T18:50:39.581Z",
+  "note": "No chat data found in API response for the specified date range."
 },
 {
   "campaignName": "bot_followup_v1",
   "campaignId": "67cf067c8d64dd09d14ed632",
-  "sent": 32,
-  "delivered": 30,
-  "read": 25,
+  "sent": 0,
+  "delivered": 0,
+  "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:40:31.972Z"
+  "timestamp": "2025-04-02T18:50:40.624Z",
+  "note": "No chat data found in API response for the specified date range."
 },
 {
   "campaignName": "final_discount_exp_8_skill_7_march",
@@ -221,7 +228,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:40:33.002Z",
+  "timestamp": "2025-04-02T18:50:41.665Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -229,9 +236,10 @@
   "campaignId": "67cef8d4f0254509c9b58534",
   "sent": 0,
   "delivered": 0,
-  "read": 1,
+  "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:40:34.057Z"
+  "timestamp": "2025-04-02T18:50:43.672Z",
+  "note": "No chat data found in API response for the specified date range."
 },
 {
   "campaignName": "day_2_final_discount_v1",
@@ -240,7 +248,8 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:40:35.088Z"
+  "timestamp": "2025-04-02T18:50:44.731Z",
+  "note": "No chat data found in API response for the specified date range."
 },
 {
   "campaignName": "day_0_got_not_given_v2",
@@ -249,26 +258,27 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:40:36.118Z",
+  "timestamp": "2025-04-02T18:50:45.775Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
   "campaignName": "Upsell_new_Upsekill_day_5",
   "campaignId": "67ce9ec1c7cade09d01ebba8",
   "sent": 0,
-  "delivered": 1,
-  "read": 11,
+  "delivered": 0,
+  "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:40:37.145Z"
+  "timestamp": "2025-04-02T18:50:46.818Z",
+  "note": "No chat data found in API response for the specified date range."
 },
 {
   "campaignName": "Upsell_Job_seeker_day_5",
   "campaignId": "67ce9db281bbbc31cbd133d5",
   "sent": 0,
-  "delivered": 3,
-  "read": 33,
+  "delivered": 0,
+  "read": 3,
   "failed": 0,
-  "timestamp": "2025-04-02T14:40:38.180Z"
+  "timestamp": "2025-04-02T18:50:47.857Z"
 },
 {
   "campaignName": "recruitment_drip_unpaid_certified_8thmarch",
@@ -277,7 +287,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:40:39.201Z",
+  "timestamp": "2025-04-02T18:50:48.898Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -285,9 +295,10 @@
   "campaignId": "67cc40a4620ee609cc570748",
   "sent": 0,
   "delivered": 0,
-  "read": 1,
+  "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:40:40.225Z"
+  "timestamp": "2025-04-02T18:50:49.940Z",
+  "note": "No chat data found in API response for the specified date range."
 },
 {
   "campaignName": "unpaid_credibility_v7",
@@ -296,17 +307,18 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:40:41.250Z",
+  "timestamp": "2025-04-02T18:50:50.991Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
   "campaignName": "course_plan_pdf_8",
   "campaignId": "67cc1867f6eabd09cddba0c4",
-  "sent": 11,
-  "delivered": 10,
-  "read": 11,
-  "failed": 1,
-  "timestamp": "2025-04-02T14:40:42.274Z"
+  "sent": 0,
+  "delivered": 0,
+  "read": 0,
+  "failed": 0,
+  "timestamp": "2025-04-02T18:50:52.041Z",
+  "note": "No chat data found in API response for the specified date range."
 },
 {
   "campaignName": "certified_referral_paid_t1_7th_march_v2",
@@ -315,7 +327,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:40:43.300Z",
+  "timestamp": "2025-04-02T18:50:53.083Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -323,18 +335,20 @@
   "campaignId": "67cada596d281109f5307134",
   "sent": 0,
   "delivered": 0,
-  "read": 1,
+  "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:40:44.340Z"
+  "timestamp": "2025-04-02T18:50:54.137Z",
+  "note": "No chat data found in API response for the specified date range."
 },
 {
   "campaignName": "certified_referral_unpaid_t1_7th_march_v2",
   "campaignId": "67cad8635bc04709cc3ecb31",
   "sent": 0,
   "delivered": 0,
-  "read": 1,
+  "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:40:45.407Z"
+  "timestamp": "2025-04-02T18:50:55.191Z",
+  "note": "No chat data found in API response for the specified date range."
 },
 {
   "campaignName": "certified_referral_unpaid_t1_7th_march_v1",
@@ -343,7 +357,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:40:46.433Z",
+  "timestamp": "2025-04-02T18:50:56.244Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -353,7 +367,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:40:47.456Z",
+  "timestamp": "2025-04-02T18:50:57.295Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -361,9 +375,10 @@
   "campaignId": "67c9ccccef0dc509cfb4596d",
   "sent": 0,
   "delivered": 0,
-  "read": 1,
+  "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:40:48.489Z"
+  "timestamp": "2025-04-02T18:50:58.338Z",
+  "note": "No chat data found in API response for the specified date range."
 },
 {
   "campaignName": "certified_referral_unpaid_t1_6th_march_v3",
@@ -372,14 +387,14 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:40:49.519Z",
+  "timestamp": "2025-04-02T18:50:59.392Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
   "campaignName": "certified_referral_unpaid_t1_6th_march_v2",
   "campaignId": "67c9c766146e7309cea2d6d0",
   "error": "Failed to process details: Request failed with status code 429",
-  "timestamp": "2025-04-02T14:41:05.664Z"
+  "timestamp": "2025-04-02T18:51:15.162Z"
 },
 {
   "campaignName": "t1_unpaid_recruitment_18feb",
@@ -388,7 +403,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:41:12.275Z",
+  "timestamp": "2025-04-02T18:51:21.514Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -396,9 +411,10 @@
   "campaignId": "67c82b9e69f4e209c9449b7c",
   "sent": 0,
   "delivered": 0,
-  "read": 1,
+  "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:41:13.315Z"
+  "timestamp": "2025-04-02T18:51:22.543Z",
+  "note": "No chat data found in API response for the specified date range."
 },
 {
   "campaignName": "cert_purchase_report_2_skill_v2",
@@ -407,7 +423,8 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:41:14.380Z"
+  "timestamp": "2025-04-02T18:51:23.578Z",
+  "note": "No chat data found in API response for the specified date range."
 },
 {
   "campaignName": "cert_purchase_report_3_v2",
@@ -416,7 +433,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:41:15.446Z",
+  "timestamp": "2025-04-02T18:51:24.603Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -426,7 +443,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:41:16.498Z",
+  "timestamp": "2025-04-02T18:51:25.633Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -434,9 +451,10 @@
   "campaignId": "67c07bd920220509d4843d96",
   "sent": 0,
   "delivered": 0,
-  "read": 2,
+  "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:41:17.573Z"
+  "timestamp": "2025-04-02T18:51:26.660Z",
+  "note": "No chat data found in API response for the specified date range."
 },
 {
   "campaignName": "cert_purchase_report_1_skill",
@@ -445,7 +463,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:41:18.623Z",
+  "timestamp": "2025-04-02T18:51:27.678Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -455,7 +473,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:41:19.721Z",
+  "timestamp": "2025-04-02T18:51:28.700Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -465,7 +483,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:41:20.764Z",
+  "timestamp": "2025-04-02T18:51:29.728Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -475,7 +493,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:41:21.804Z",
+  "timestamp": "2025-04-02T18:51:30.751Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -485,7 +503,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:41:22.847Z",
+  "timestamp": "2025-04-02T18:51:31.780Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -495,35 +513,36 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:41:23.891Z",
+  "timestamp": "2025-04-02T18:51:32.809Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
   "campaignName": "followup_certified_v16_high_4",
   "campaignId": "67b6e65253b61e09ceff4084",
-  "sent": 610,
-  "delivered": 480,
-  "read": 413,
-  "failed": 130,
-  "timestamp": "2025-04-02T14:41:24.941Z"
+  "sent": 52,
+  "delivered": 35,
+  "read": 14,
+  "failed": 13,
+  "timestamp": "2025-04-02T18:51:33.834Z"
 },
 {
   "campaignName": "followup_certified_fallback_v_16_experiment_low_v4",
   "campaignId": "67b6e38bafbdf009cc8b6826",
-  "sent": 419,
-  "delivered": 333,
-  "read": 283,
-  "failed": 82,
-  "timestamp": "2025-04-02T14:41:26.006Z"
+  "sent": 23,
+  "delivered": 12,
+  "read": 3,
+  "failed": 6,
+  "timestamp": "2025-04-02T18:51:34.861Z"
 },
 {
   "campaignName": "video_attempted_t2_v1",
   "campaignId": "67b0a5c13e547109c4f83d7e",
-  "sent": 51,
-  "delivered": 44,
-  "read": 38,
-  "failed": 7,
-  "timestamp": "2025-04-02T14:41:27.051Z"
+  "sent": 0,
+  "delivered": 0,
+  "read": 0,
+  "failed": 0,
+  "timestamp": "2025-04-02T18:51:35.880Z",
+  "note": "No chat data found in API response for the specified date range."
 },
 {
   "campaignName": "final_discount_exp_6_skill_11_feb",
@@ -532,7 +551,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:41:28.092Z",
+  "timestamp": "2025-04-02T18:51:36.902Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -542,7 +561,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:41:29.142Z",
+  "timestamp": "2025-04-02T18:51:37.934Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -552,7 +571,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:41:30.189Z",
+  "timestamp": "2025-04-02T18:51:38.960Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -562,7 +581,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:41:31.245Z",
+  "timestamp": "2025-04-02T18:51:39.986Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -572,7 +591,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:41:32.300Z",
+  "timestamp": "2025-04-02T18:51:41.009Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -582,7 +601,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:41:33.357Z",
+  "timestamp": "2025-04-02T18:51:42.038Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -592,7 +611,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:41:34.403Z",
+  "timestamp": "2025-04-02T18:51:43.069Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -602,7 +621,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:41:35.454Z",
+  "timestamp": "2025-04-02T18:51:44.107Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -612,7 +631,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:41:36.503Z",
+  "timestamp": "2025-04-02T18:51:45.135Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -622,7 +641,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:41:37.548Z",
+  "timestamp": "2025-04-02T18:51:46.158Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -632,7 +651,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:41:38.588Z",
+  "timestamp": "2025-04-02T18:51:47.197Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -642,7 +661,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:41:39.628Z",
+  "timestamp": "2025-04-02T18:51:48.228Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -652,7 +671,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:41:40.670Z",
+  "timestamp": "2025-04-02T18:51:49.252Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -662,7 +681,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:41:41.715Z",
+  "timestamp": "2025-04-02T18:51:50.278Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -672,7 +691,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:41:42.771Z",
+  "timestamp": "2025-04-02T18:51:51.303Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -682,7 +701,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:41:43.812Z",
+  "timestamp": "2025-04-02T18:51:52.326Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -692,7 +711,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:41:44.871Z",
+  "timestamp": "2025-04-02T18:51:53.576Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -702,7 +721,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:41:45.921Z",
+  "timestamp": "2025-04-02T18:51:54.607Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -712,7 +731,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:41:46.967Z",
+  "timestamp": "2025-04-02T18:51:55.630Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -722,7 +741,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:41:48.011Z",
+  "timestamp": "2025-04-02T18:51:56.654Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -732,7 +751,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:41:49.066Z",
+  "timestamp": "2025-04-02T18:51:57.679Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -742,7 +761,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:41:50.110Z",
+  "timestamp": "2025-04-02T18:51:58.711Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -752,7 +771,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:41:51.162Z",
+  "timestamp": "2025-04-02T18:51:59.734Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -762,7 +781,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:41:52.200Z",
+  "timestamp": "2025-04-02T18:52:00.756Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -772,14 +791,14 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:41:53.266Z",
+  "timestamp": "2025-04-02T18:52:01.779Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
   "campaignName": "t1_t2_unpaid_new_v1_low_2",
   "campaignId": "679ba8dfd5a79e09c8cd820b",
   "error": "Failed to process details: Request failed with status code 429",
-  "timestamp": "2025-04-02T14:42:09.174Z"
+  "timestamp": "2025-04-02T18:52:17.654Z"
 },
 {
   "campaignName": "t1_paid_t2_new_skill_v1_nov_1_7",
@@ -788,7 +807,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:42:15.910Z",
+  "timestamp": "2025-04-02T18:52:24.158Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -798,7 +817,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:42:16.934Z",
+  "timestamp": "2025-04-02T18:52:25.183Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -808,7 +827,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:42:17.958Z",
+  "timestamp": "2025-04-02T18:52:26.205Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -818,7 +837,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:42:18.992Z",
+  "timestamp": "2025-04-02T18:52:27.226Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -828,7 +847,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:42:20.041Z",
+  "timestamp": "2025-04-02T18:52:28.245Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -838,7 +857,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:42:21.063Z",
+  "timestamp": "2025-04-02T18:52:29.270Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -848,7 +867,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:42:22.081Z",
+  "timestamp": "2025-04-02T18:52:30.307Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -858,7 +877,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:42:23.106Z",
+  "timestamp": "2025-04-02T18:52:31.337Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -868,7 +887,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:42:24.138Z",
+  "timestamp": "2025-04-02T18:52:32.368Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -878,7 +897,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:42:25.161Z",
+  "timestamp": "2025-04-02T18:52:33.390Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -888,7 +907,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:42:26.197Z",
+  "timestamp": "2025-04-02T18:52:34.412Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -898,7 +917,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:42:27.217Z",
+  "timestamp": "2025-04-02T18:52:35.438Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -908,7 +927,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:42:28.242Z",
+  "timestamp": "2025-04-02T18:52:36.459Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -918,7 +937,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:42:29.265Z",
+  "timestamp": "2025-04-02T18:52:37.485Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -928,7 +947,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:42:30.288Z",
+  "timestamp": "2025-04-02T18:52:38.516Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -938,7 +957,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:42:31.317Z",
+  "timestamp": "2025-04-02T18:52:39.539Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -948,7 +967,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:42:32.342Z",
+  "timestamp": "2025-04-02T18:52:40.563Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -958,7 +977,8 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:42:33.373Z"
+  "timestamp": "2025-04-02T18:52:41.585Z",
+  "note": "No chat data found in API response for the specified date range."
 },
 {
   "campaignName": "nov_21_t2_exp_1",
@@ -967,7 +987,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:42:34.397Z",
+  "timestamp": "2025-04-02T18:52:42.606Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -977,7 +997,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:42:35.424Z",
+  "timestamp": "2025-04-02T18:52:43.632Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -987,7 +1007,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:42:36.447Z",
+  "timestamp": "2025-04-02T18:52:44.656Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -997,7 +1017,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:42:37.479Z",
+  "timestamp": "2025-04-02T18:52:45.680Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -1007,7 +1027,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:42:38.506Z",
+  "timestamp": "2025-04-02T18:52:46.706Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -1017,7 +1037,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:42:39.526Z",
+  "timestamp": "2025-04-02T18:52:47.740Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -1027,7 +1047,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:42:40.553Z",
+  "timestamp": "2025-04-02T18:52:48.759Z",
   "note": "No chat data found in API response for the specified date range."
 },
 {
@@ -1037,7 +1057,7 @@
   "delivered": 0,
   "read": 0,
   "failed": 0,
-  "timestamp": "2025-04-02T14:42:41.579Z",
+  "timestamp": "2025-04-02T18:52:49.783Z",
   "note": "No chat data found in API response for the specified date range."
 }
 ]
