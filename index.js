@@ -546,13 +546,32 @@ process.on('unhandledRejection', (reason, promise) => {
 // Schedule to run every day at 12:00 AM IST (6:30 PM UTC)
 console.log('Starting cron job for campaign detail checks at 12:00 AM IST daily...');
 cron.schedule('30 18 * * *', async () => {
+  console.log('Running scheduled campaign detail check...');
   try {
-    console.log('Running scheduled campaign detail check...');
-    await scrapeCampaignDetails().catch(err => {
-      console.error('Error in scheduled campaign detail check:', err);
-    });
-  } catch (error) {
-    console.error('Cron job error:', error);
+    // Check session validity before scraping
+    if (!isSessionValid()) {
+      console.log('Cron Job: Session invalid or expired, performing login first...');
+      try {
+        await login(); // Attempt to login
+        // After successful login, proceed to scrape
+        console.log('Cron Job: Login successful, proceeding with scraping...');
+        await scrapeCampaignDetails(); 
+      } catch (loginError) {
+        console.error('Cron Job: Login failed during scheduled run:', loginError);
+        // Decide if you want to retry or just log the error
+      }
+    } else {
+      // Session is valid, proceed directly with scraping
+      console.log('Cron Job: Session valid, proceeding with scraping...');
+      await scrapeCampaignDetails();
+    }
+  } catch (scrapeError) {
+    // Catch errors specifically from scrapeCampaignDetails (like the 401 handler)
+    console.error('Cron Job: Error during scheduled campaign scraping:', scrapeError.message);
+    // If the error was session expiry, the session files are already deleted by scrapeCampaignDetails
+    // The next run will attempt to login again.
+  } finally {
+    console.log('Scheduled campaign detail check finished.');
   }
 });
 
