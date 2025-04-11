@@ -26,22 +26,19 @@ app.use(express.json());
 app.get('/campaigns', async (req, res) => {
   console.log('Campaigns API endpoint called');
   
-  try {
-    // Check if we need to login first
-    if (!isSessionValid()) {
-      console.log('No valid session, performing login first');
-      // We need to login first, then scrape campaign details
-      const loginPromise = login();
+  let retryCount = 0;
+  const maxRetries = 3;
+  
+  async function attemptCampaignFetch() {
+    try {
+      // Check if we need to login first
+      if (!isSessionValid()) {
+        console.log('API: No valid session, performing login first');
+        await login();
+        console.log('API: Login successful, proceeding with scraping...');
+      }
       
-      // Set a timeout to prevent hanging
-      const timeoutPromise = new Promise((_, reject) => {
-        setTimeout(() => reject(new Error('Login and campaign scraping timed out')), 60000);
-      });
-      
-      // Wait for login to complete or timeout
-      await Promise.race([loginPromise, timeoutPromise]);
-      
-      // Fetch campaign details after login
+      // Fetch campaign details (login is now handled inside scrapeCampaignDetails if needed)
       const campaignDetails = await scrapeCampaignDetails();
       
       if (campaignDetails) {
@@ -53,33 +50,33 @@ app.get('/campaigns', async (req, res) => {
       } else {
         return res.status(500).json({ 
           success: false, 
-          error: 'Could not retrieve campaign details after login' 
-        });
-      }
-    } else {
-      // Session is valid, just scrape campaign details
-      const campaignDetails = await scrapeCampaignDetails();
-      
-      if (campaignDetails) {
-        return res.json({ 
-          success: true, 
-          campaigns: campaignDetails,
-          timestamp: new Date().toISOString() 
-        });
-      } else {
-        return res.status(500).json({ 
-          success: false, 
           error: 'Failed to retrieve campaign details' 
         });
       }
+    } catch (error) {
+      console.error('Error in campaigns endpoint:', error);
+      
+      // Retry logic for API endpoint
+      retryCount++;
+      if (retryCount < maxRetries) {
+        const delayMs = 5000 * retryCount; // Increasing delay with each retry
+        console.log(`API: Retry attempt ${retryCount}/${maxRetries} in ${delayMs/1000} seconds...`);
+        
+        // Wait before retrying
+        await new Promise(resolve => setTimeout(resolve, delayMs));
+        return await attemptCampaignFetch();
+      } else {
+        console.error(`API: Failed after ${maxRetries} retry attempts.`);
+        return res.status(500).json({ 
+          success: false, 
+          error: 'Internal server error after multiple retry attempts' 
+        });
+      }
     }
-  } catch (error) {
-    console.error('Error in campaigns endpoint:', error);
-    return res.status(500).json({ 
-      success: false, 
-      error: 'Internal server error' 
-    });
   }
+  
+  // Start the process
+  await attemptCampaignFetch();
 });
 
 // Start Express server
@@ -91,7 +88,7 @@ app.listen(PORT, () => {
 async function login() {
   console.log('Starting login process...');
   const browser = await chromium.launch({ 
-    headless: true, // Change to true for server environments
+    headless: false, // Change to true for server environments
     args: [
       '--no-sandbox',
       '--disable-setuid-sandbox',
@@ -112,7 +109,7 @@ async function login() {
   try {
     // Navigate to login page
     console.log(`Navigating to login page: ${process.env.LOGIN_URL}`);
-    await page.goto(process.env.LOGIN_URL, { waitUntil: 'networkidle', timeout: 60000 });
+    await page.goto(process.env.LOGIN_URL, { waitUntil: 'domcontentloaded', timeout: 60000 });
     console.log('Navigated to login page');
 
     // Take screenshot for debugging
@@ -148,7 +145,7 @@ async function login() {
         console.log(`Found login button with selector: ${selector}`);
         // Click button and wait for navigation
         await Promise.all([
-          page.waitForNavigation({ waitUntil: 'networkidle', timeout: 60000 }),
+          page.waitForNavigation({ waitUntil: 'domcontentloaded', timeout: 60000 }),
           button.click()
         ]);
         buttonFound = true;
@@ -163,7 +160,7 @@ async function login() {
       if (continueButtons.length >= 2) {
         console.log('Found multiple Continue buttons, clicking the second one');
         await Promise.all([
-          page.waitForNavigation({ waitUntil: 'networkidle', timeout: 60000 }),
+          page.waitForNavigation({ waitUntil: 'domcontentloaded', timeout: 60000 }),
           continueButtons[1].click()
         ]);
       } else {
@@ -173,7 +170,7 @@ async function login() {
         if (formButtons.length > 0) {
           const lastButton = formButtons[formButtons.length - 1];
           await Promise.all([
-            page.waitForNavigation({ waitUntil: 'networkidle', timeout: 60000 }),
+            page.waitForNavigation({ waitUntil: 'domcontentloaded', timeout: 60000 }),
             lastButton.click()
           ]);
         } else {
@@ -334,8 +331,10 @@ async function scrapeCampaignDetails() {
       
       // Define date range (e.g., last 1 day up to today)
       const toDate = new Date(); // End date is now
+      toDate.setHours(0, 0, 0, 0); // Set to today at 00:00 AM
       const fromDate = new Date();
-      fromDate.setDate(toDate.getDate() - 1); // Start date is 1 day ago
+      fromDate.setDate(toDate.getDate() - 7); // Start date is 1 day ago
+      fromDate.setHours(0, 0, 0, 0); // Set to 00:00 AM
 
       console.log(`Fetching details for campaigns from ${fromDate.toISOString()} to ${toDate.toISOString()}`);
 
@@ -383,7 +382,8 @@ async function scrapeCampaignDetails() {
                       delivered: firstChat.deliveredChatcount ?? 0,
                       read: firstChat.readChatCount ?? 0,
                       failed: firstChat.failedChatCount ?? 0,
-                      timestamp: new Date().toISOString() // Add timestamp for this specific detail fetch
+                      timestamp: new Date().toISOString(), // Add timestamp for this specific detail fetch
+                      chatCount: detailsData.chats.length // Add chat count field
                   };
                   console.log(`Successfully fetched details for campaign: ${campaign.name}`);
                   success = true;
@@ -397,23 +397,28 @@ async function scrapeCampaignDetails() {
                       read: 0,
                       failed: 0,
                       timestamp: new Date().toISOString(),
+                      chatCount: 0, // Add chat count field
                       note: "No chat data found in API response for the specified date range."
                   };
               }
 
-              // Add the result to the main list (for returning)
-              campaignDetails.push(detailResult);
-              
-              // Write this detail to the output file immediately
-              try {
-                  const separator = detailCount > 0 ? ',\n' : ''; // Add comma if not the first item
-                  fs.appendFileSync(CAMPAIGN_DETAILS_OUTPUT_PATH, 
-                      `${separator}${JSON.stringify(detailResult, null, 2)}`);
-                  detailCount++;
-                  console.log(`Wrote details for campaign: ${campaign.name} to output file`);
-              } catch (writeError) {
-                  console.error(`Error writing detail for campaign ${campaign.name} to file: ${writeError.message}`);
-                  logRateLimit(`Error writing detail for campaign ${campaign.name} to file: ${writeError.message}`);
+              // Add the result to the main list (for returning) only if it has at least 2 chats
+              if (detailResult.chatCount >= 2) {
+                  campaignDetails.push(detailResult);
+                  
+                  // Write this detail to the output file immediately
+                  try {
+                      const separator = detailCount > 0 ? ',\n' : ''; // Add comma if not the first item
+                      fs.appendFileSync(CAMPAIGN_DETAILS_OUTPUT_PATH, 
+                          `${separator}${JSON.stringify(detailResult, null, 2)}`);
+                      detailCount++;
+                      console.log(`Wrote details for campaign: ${campaign.name} to output file`);
+                  } catch (writeError) {
+                      console.error(`Error writing detail for campaign ${campaign.name} to file: ${writeError.message}`);
+                      logRateLimit(`Error writing detail for campaign ${campaign.name} to file: ${writeError.message}`);
+                  }
+              } else {
+                  console.log(`Skipping campaign ${campaign.name} as it has fewer than 2 chats (actual: ${detailResult.chatCount})`);
               }
 
               // --- Add delay after successful processing of one campaign --- 
@@ -427,11 +432,12 @@ async function scrapeCampaignDetails() {
                    campaignName: campaign.name,
                    campaignId: campaign._id,
                    error: `Failed to process details: ${detailError.message}`,
-                   timestamp: new Date().toISOString()
+                   timestamp: new Date().toISOString(),
+                   chatCount: 0 // Add chat count field (0 for error cases)
                };
-               campaignDetails.push(detailResult);
-              
-               // Write the error detail to file immediately
+               
+               // Skip adding to campaignDetails since chatCount is less than 2
+               // Only write to the output file for record keeping
                try {
                    const separator = detailCount > 0 ? ',\n' : ''; // Add comma if not the first item
                    fs.appendFileSync(CAMPAIGN_DETAILS_OUTPUT_PATH, 
@@ -499,8 +505,17 @@ async function scrapeCampaignDetails() {
             console.error('Error removing session files:', fsError);
           }
           
-          // We should probably just throw the error here and let the endpoint handle re-login
-          throw new Error('Session expired during campaign fetch'); 
+          // Instead of throwing an error, attempt to login and retry
+          console.log('Attempting to login and retry...');
+          try {
+            await login(); // Perform login again
+            console.log('Login successful after session expiry, retrying campaign fetch...');
+            // Retry scraping campaign details after successful login
+            return await scrapeCampaignDetails();
+          } catch (loginError) {
+            console.error('Failed to login after session expiry:', loginError);
+            throw loginError; // Throw the login error instead
+          }
         }
       }
       
@@ -543,56 +558,92 @@ process.on('unhandledRejection', (reason, promise) => {
   console.error('Unhandled rejection at:', promise, 'reason:', reason);
 });
 
-// Schedule to run every day at 12:00 AM IST (6:30 PM UTC)
-console.log('Starting cron job for campaign detail checks at 12:00 AM IST daily...');
-cron.schedule('30 18 * * *', async () => {
+// Schedule to run every day at 12:05 AM IST (6:35 PM UTC)
+console.log('Starting cron job for campaign detail checks at 12:05 AM IST daily...');
+cron.schedule('35 18 * * *', async () => {
   console.log('Running scheduled campaign detail check...');
-  try {
-    // Check session validity before scraping
-    if (!isSessionValid()) {
-      console.log('Cron Job: Session invalid or expired, performing login first...');
-      try {
+  
+  let retryCount = 0;
+  const maxRetries = 3;
+  
+  async function attemptCronCheck() {
+    try {
+      // Check session validity before scraping
+      if (!isSessionValid()) {
+        console.log('Cron Job: Session invalid or expired, performing login first...');
         await login(); // Attempt to login
         // After successful login, proceed to scrape
         console.log('Cron Job: Login successful, proceeding with scraping...');
-        await scrapeCampaignDetails(); 
-      } catch (loginError) {
-        console.error('Cron Job: Login failed during scheduled run:', loginError);
-        // Decide if you want to retry or just log the error
+        await scrapeCampaignDetails();
+      } else {
+        // Session is valid, proceed directly with scraping
+        console.log('Cron Job: Session valid, proceeding with scraping...');
+        await scrapeCampaignDetails();
       }
-    } else {
-      // Session is valid, proceed directly with scraping
-      console.log('Cron Job: Session valid, proceeding with scraping...');
-      await scrapeCampaignDetails();
+      console.log('Scheduled campaign detail check completed successfully');
+    } catch (error) {
+      console.error('Cron Job: Error during scheduled run:', error.message);
+      
+      // Retry logic
+      retryCount++;
+      if (retryCount < maxRetries) {
+        const delayMs = 5000 * retryCount; // Increasing delay with each retry
+        console.log(`Cron Job: Retry attempt ${retryCount}/${maxRetries} in ${delayMs/1000} seconds...`);
+        
+        // Wait before retrying
+        await new Promise(resolve => setTimeout(resolve, delayMs));
+        return await attemptCronCheck();
+      } else {
+        console.error(`Cron Job: Failed after ${maxRetries} retry attempts.`);
+        // Log the failure but let the cron continue for next scheduled run
+      }
+    } finally {
+      console.log('Scheduled campaign detail check finished.');
     }
-  } catch (scrapeError) {
-    // Catch errors specifically from scrapeCampaignDetails (like the 401 handler)
-    console.error('Cron Job: Error during scheduled campaign scraping:', scrapeError.message);
-    // If the error was session expiry, the session files are already deleted by scrapeCampaignDetails
-    // The next run will attempt to login again.
-  } finally {
-    console.log('Scheduled campaign detail check finished.');
   }
+  
+  await attemptCronCheck();
 });
 
 // Initial run on startup
 console.log('Server started, initializing first campaign detail check...');
 (async () => {
-  try {
-    if (isSessionValid()) {
-      console.log('Using existing session for initial check');
-      await scrapeCampaignDetails().catch(err => {
-        console.error('Error in initial campaign detail check:', err);
-      });
-    } else {
-      console.log('No valid session found, logging in...');
-      await login().catch(err => {
-        console.error('Error during initial login:', err);
-      });
+  let retryCount = 0;
+  const maxRetries = 3;
+  
+  async function attemptInitialCheck() {
+    try {
+      if (isSessionValid()) {
+        console.log('Using existing session for initial check');
+        await scrapeCampaignDetails();
+      } else {
+        console.log('No valid session found, logging in...');
+        await login();
+        // After successful login, scrape campaign details
+        console.log('Initial login successful, scraping campaign details...');
+        await scrapeCampaignDetails();
+      }
+      console.log('Initial campaign detail check completed successfully');
+    } catch (error) {
+      console.error('Error during startup sequence:', error);
+      
+      // Retry logic
+      retryCount++;
+      if (retryCount < maxRetries) {
+        const delayMs = 5000 * retryCount; // Increasing delay with each retry
+        console.log(`Retry attempt ${retryCount}/${maxRetries} in ${delayMs/1000} seconds...`);
+        
+        // Wait before retrying
+        await new Promise(resolve => setTimeout(resolve, delayMs));
+        return await attemptInitialCheck();
+      } else {
+        console.error(`Failed initial check after ${maxRetries} attempts. Server continues running.`);
+        // Continue running the server even if initial check fails
+      }
     }
-  } catch (error) {
-    console.error('Error during startup sequence:', error);
   }
+  
+  await attemptInitialCheck();
 })();
 
 // Endpoint for Vercel cron job integration
@@ -608,28 +659,58 @@ app.get('/api/cron-check', async (req, res) => {
   }
   
   console.log('Running cron job via API endpoint...');
-  try {
-    const campaignDetails = await scrapeCampaignDetails();
-    
-    if (campaignDetails) {
-      return res.json({ 
-        success: true, 
-        campaigns: campaignDetails,
-        timestamp: new Date().toISOString()
-      });
-    } else {
-      return res.status(500).json({ 
-        success: false, 
-        error: 'Failed to retrieve campaign details' 
-      });
+  
+  let retryCount = 0;
+  const maxRetries = 3;
+  
+  async function attemptCronApiCheck() {
+    try {
+      // Check if we need to login first
+      if (!isSessionValid()) {
+        console.log('Cron API: No valid session, performing login first');
+        await login();
+        console.log('Cron API: Login successful, proceeding with scraping...');
+      }
+      
+      // Fetch campaign details (login is now handled inside scrapeCampaignDetails if needed)
+      const campaignDetails = await scrapeCampaignDetails();
+      
+      if (campaignDetails) {
+        return res.json({ 
+          success: true, 
+          campaigns: campaignDetails,
+          timestamp: new Date().toISOString()
+        });
+      } else {
+        return res.status(500).json({ 
+          success: false, 
+          error: 'Failed to retrieve campaign details' 
+        });
+      }
+    } catch (error) {
+      console.error('Error in cron API endpoint:', error);
+      
+      // Retry logic for API endpoint
+      retryCount++;
+      if (retryCount < maxRetries) {
+        const delayMs = 5000 * retryCount; // Increasing delay with each retry
+        console.log(`Cron API: Retry attempt ${retryCount}/${maxRetries} in ${delayMs/1000} seconds...`);
+        
+        // Wait before retrying
+        await new Promise(resolve => setTimeout(resolve, delayMs));
+        return await attemptCronApiCheck();
+      } else {
+        console.error(`Cron API: Failed after ${maxRetries} retry attempts.`);
+        return res.status(500).json({ 
+          success: false, 
+          error: 'Internal server error after multiple retry attempts' 
+        });
+      }
     }
-  } catch (error) {
-    console.error('Error in cron endpoint:', error);
-    return res.status(500).json({ 
-      success: false, 
-      error: 'Internal server error' 
-    });
   }
+  
+  // Start the process
+  await attemptCronApiCheck();
 });
 
 // Initial run on startup - only in non-Vercel environments

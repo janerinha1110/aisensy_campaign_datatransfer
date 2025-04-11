@@ -1,6 +1,415 @@
 [
   {
     "selectBasis": "homogeneous",
+    "_id": "67f62f878b228509cd89f7eb",
+    "createdBy": "agent",
+    "retryCompletedAt": [],
+    "selected": [],
+    "unSelected": [],
+    "retryAttempts": 0,
+    "hasScheduledRetryCampaignTime": [],
+    "manualRetryCreatedAt": [],
+    "manualRetryCompletedAt": [],
+    "name": "game_test_v4_Paid",
+    "payload": {
+      "templateName": "game_format_v7_paid",
+      "template": {
+        "_id": "67f62f5766961d0bfc8ec5d3",
+        "status": "APPROVED",
+        "processed": "2025-04-09T08:27:03.225Z",
+        "callToAction": [],
+        "quickReplies": [],
+        "templateParams": [
+          "Arjun"
+        ],
+        "label": "game_format_v7_paid",
+        "category": "MARKETING",
+        "type": "TEXT",
+        "name": "game_format_v7_paid",
+        "format": "Hi {{1}}, since you've already enrolled and begun your HR journey, it's time to take it to the next level 🚀\n\nYou're now eligible for the Advanced HR Simulation Assessment—an exclusive opportunity to earn your *Certified Advanced HR Management Certificate.*\n\n*🎯 Tackle real-world scenarios across hiring, engagement & conflict resolution*\n*🎓 Get certified in just 10 minutes with our simulation-based evaluation*\n*💼 Endorsed by recruiters at TCS, Infosys, Wipro & top high-growth startups*\n\nWhy our top learners are choosing to certify: ✅ 92% reported better interview outcomes\n✅ 70% added the certificate to LinkedIn within 48 hours\n✅ 1 in 3 got shortlisted faster for HR roles\n\n🎖 As a paid learner, this is your next step to stand out in a competitive HR market.\n\n*👉 Click below to take the Advanced Assessment & get certified now*\n\nLimited to the first 30 learners only!",
+        "sampleMessage": "Hi [Arjun], since you've already enrolled and begun your HR journey, it's time to take it to the next level 🚀\n\nYou're now eligible for the Advanced HR Simulation Assessment—an exclusive opportunity to earn your *Certified Advanced HR Management Certificate.*\n\n*🎯 Tackle real-world scenarios across hiring, engagement & conflict resolution*\n*🎓 Get certified in just 10 minutes with our simulation-based evaluation*\n*💼 Endorsed by recruiters at TCS, Infosys, Wipro & top high-growth startups*\n\nWhy our top learners are choosing to certify: ✅ 92% reported better interview outcomes\n✅ 70% added the certificate to LinkedIn within 48 hours\n✅ 1 in 3 got shortlisted faster for HR roles\n\n🎖 As a paid learner, this is your next step to stand out in a competitive HR market.\n\n*👉 Click below to take the Advanced Assessment & get certified now*\n\nLimited to the first 30 learners only!",
+        "actionType": "All",
+        "sampleMediaUrl": "",
+        "sampleCTAUrl": "",
+        "isClickTrackingEnabled": true,
+        "buttons": [
+          {
+            "type": "URL",
+            "text": "Get Advanced Certificate",
+            "url": "https://ai-sensy.co/tck/{{1}}",
+            "urlMetadata": {
+              "url": "https://quizizz.com/pro/join?gc=01738788"
+            },
+            "example": [
+              "https://ai-sensy.co/tck/ywEeMF"
+            ]
+          }
+        ],
+        "parameters": 1,
+        "namespace": "0d6f8068_820f_4f58_b9e8_d67712686fa9",
+        "templateId": "1030497515604202",
+        "templateLanguage": "English",
+        "assistantId": "6515621dfe38c80b4d35a1a7",
+        "clientId": "6515621dfe38c80b4d35a19e",
+        "assistantName": "CareerNinja",
+        "partnerId": null,
+        "carouselCards": [],
+        "createdAt": "2025-04-09T08:27:03.229Z",
+        "updatedAt": "2025-04-09T08:27:07.123Z",
+        "__v": 0,
+        "rejectedReason": "NONE",
+        "statusJourney": [
+          {
+            "_id": "67f62f5b6755620f6cdce307",
+            "status": "APPROVED",
+            "timestamp": "2025-04-09T08:27:07.122Z",
+            "reason": "NONE"
+          }
+        ]
+      }
+    },
+    "status": "LIVE",
+    "type": "API",
+    "assistantId": "6515621dfe38c80b4d35a1a7",
+    "clientId": "6515621dfe38c80b4d35a19e",
+    "messageType": "TEMPLATE",
+    "messageErrors": {
+      "ERR_WA_131049": 135,
+      "ERR_WA_131026": 18,
+      "ERR_WA_130472": 7
+    },
+    "createdAt": "2025-04-09T08:27:51.647Z",
+    "updatedAt": "2025-04-09T08:33:51.997Z",
+    "__v": 0,
+    "audienceCount": 765,
+    "submittedCount": 765
+  },
+  {
+    "selectBasis": "homogeneous",
+    "_id": "67f61cd656c89f09d26e0f9c",
+    "createdBy": "agent",
+    "retryCompletedAt": [],
+    "selected": [],
+    "unSelected": [],
+    "retryAttempts": 0,
+    "hasScheduledRetryCampaignTime": [],
+    "manualRetryCreatedAt": [],
+    "manualRetryCompletedAt": [],
+    "name": "game_test_v3_Paid",
+    "payload": {
+      "templateName": "game_format_v5_paid",
+      "template": {
+        "_id": "67f61c7e792b7906fbf773bf",
+        "status": "APPROVED",
+        "processed": "2025-04-09T07:06:38.889Z",
+        "callToAction": [],
+        "quickReplies": [],
+        "templateParams": [
+          "Arjun"
+        ],
+        "label": "game_format_v5_paid",
+        "category": "MARKETING",
+        "type": "TEXT",
+        "name": "game_format_v5_paid",
+        "format": "Hi {{1}}, since you've already enrolled and begun your HR journey, it's time to take it to the next level 🚀\n\nYou're now eligible for the Advanced HR Simulation Assessment—an exclusive opportunity to earn your *Certified Advanced HR Management Certificate.*\n\n*🎯 Tackle real-world scenarios across hiring, engagement & conflict resolution*\n*🎓 Get certified in just 10 minutes with our simulation-based evaluation*\n*💼 Endorsed by recruiters at TCS, Infosys, Wipro & top high-growth startups*\n\nWhy our top learners are choosing to certify: ✅ 92% reported better interview outcomes\n✅ 70% added the certificate to LinkedIn within 48 hours\n✅ 1 in 3 got shortlisted faster for HR roles\n\n🎖 As a paid learner, this is your next step to stand out in a competitive HR market.\n\n*👉 Click below to take the Advanced Assessment & get certified now*\n\nLimited to the first 30 learners only!",
+        "sampleMessage": "Hi [Arjun], since you've already enrolled and begun your HR journey, it's time to take it to the next level 🚀\n\nYou're now eligible for the Advanced HR Simulation Assessment—an exclusive opportunity to earn your *Certified Advanced HR Management Certificate.*\n\n*🎯 Tackle real-world scenarios across hiring, engagement & conflict resolution*\n*🎓 Get certified in just 10 minutes with our simulation-based evaluation*\n*💼 Endorsed by recruiters at TCS, Infosys, Wipro & top high-growth startups*\n\nWhy our top learners are choosing to certify: ✅ 92% reported better interview outcomes\n✅ 70% added the certificate to LinkedIn within 48 hours\n✅ 1 in 3 got shortlisted faster for HR roles\n\n🎖 As a paid learner, this is your next step to stand out in a competitive HR market.\n\n*👉 Click below to take the Advanced Assessment & get certified now*\n\nLimited to the first 30 learners only!",
+        "actionType": "All",
+        "sampleMediaUrl": "",
+        "sampleCTAUrl": "",
+        "isClickTrackingEnabled": true,
+        "buttons": [
+          {
+            "type": "URL",
+            "text": "Get Advanced Certificate",
+            "url": "https://ai-sensy.co/tck/{{1}}",
+            "urlMetadata": {
+              "url": "https://quizizz.com/pro/join?gc=03502116"
+            },
+            "example": [
+              "https://ai-sensy.co/tck/ywEeMF"
+            ]
+          }
+        ],
+        "parameters": 1,
+        "namespace": "0d6f8068_820f_4f58_b9e8_d67712686fa9",
+        "templateId": "1729504267961975",
+        "templateLanguage": "English",
+        "assistantId": "6515621dfe38c80b4d35a1a7",
+        "clientId": "6515621dfe38c80b4d35a19e",
+        "assistantName": "CareerNinja",
+        "partnerId": null,
+        "carouselCards": [],
+        "createdAt": "2025-04-09T07:06:38.892Z",
+        "updatedAt": "2025-04-09T07:07:00.921Z",
+        "__v": 0,
+        "rejectedReason": "NONE",
+        "statusJourney": [
+          {
+            "_id": "67f61c94707e3e0f861eabdf",
+            "status": "APPROVED",
+            "timestamp": "2025-04-09T07:07:00.920Z",
+            "reason": "NONE"
+          }
+        ]
+      }
+    },
+    "status": "LIVE",
+    "type": "API",
+    "assistantId": "6515621dfe38c80b4d35a1a7",
+    "clientId": "6515621dfe38c80b4d35a19e",
+    "messageType": "TEMPLATE",
+    "messageErrors": {
+      "ERR_WA_131049": 159,
+      "ERR_WA_130472": 8,
+      "ERR_WA_131026": 9
+    },
+    "createdAt": "2025-04-09T07:08:06.787Z",
+    "updatedAt": "2025-04-09T07:58:13.154Z",
+    "__v": 0,
+    "audienceCount": 816,
+    "submittedCount": 816
+  },
+  {
+    "selectBasis": "homogeneous",
+    "_id": "67f61b4056c89f09d26e0f5f",
+    "createdBy": "agent",
+    "retryCompletedAt": [],
+    "selected": [],
+    "unSelected": [],
+    "retryAttempts": 0,
+    "hasScheduledRetryCampaignTime": [],
+    "manualRetryCreatedAt": [],
+    "manualRetryCompletedAt": [],
+    "name": "experiment_certificate_validity_v1_high_2",
+    "payload": {
+      "templateName": "experiment_certificate_validity_v1_high_2",
+      "template": {
+        "_id": "67f6181541a794760e72dde0",
+        "status": "APPROVED",
+        "processed": "2025-04-09T06:47:49.353Z",
+        "callToAction": [],
+        "quickReplies": [
+          "Renew Certificate"
+        ],
+        "templateParams": [
+          "Akash",
+          "Product Management",
+          "90"
+        ],
+        "label": "experiment_certificate_validity_v1_high_2",
+        "category": "MARKETING",
+        "type": "TEXT",
+        "name": "experiment_certificate_validity_v1_high_2",
+        "format": "*{{1}}*, you’ve got *47 views* on your *{{2}}* certificate — showcasing your impressive score of *{{3}}/100*. And it's just getting started! \n\n⏰ It’s been 6 months & your certificate is set to expire in *48 hours* i.e. *by 11th April ‘25, 11:59 pm*.\nAfter that, your certificate won't show up on scanning, *affecting your credibility*.\n\nBut, don't worry! At just *₹99*, you can:\n✅ Keep your certificate live, valid and scannable\n✅ Stay discoverable to lakhs of recruiters & our 1,100+ hiring partners\n✅ Do a re-attempt to improve score/keep your knowledge fresh\n✅ Keep your profile boosted by 2x\n\nOur certificates are recognised by 1,100+ companies & have already helped lakhs of learners land upto *150% hikes* at *Samsung*, *Meta*, *HDFC* & more. \n\n🎉 *At just ₹99, keep all your benefits active for 99 more days — that’s just ₹1 a day*.\nDon’t miss out on lakhs worth of potential income. Remember, *certificate will be deleted* & cannot be recovered after expiry.\n | [Renew Certificate]",
+        "sampleMessage": "*[Akash]*, you’ve got *47 views* on your *[Product Management]* certificate — showcasing your impressive score of *[90]/100*. And it's just getting started! \n\n⏰ It’s been 6 months & your certificate is set to expire in *48 hours* i.e. *by 11th April ‘25, 11:59 pm*.\nAfter that, your certificate won't show up on scanning, *affecting your credibility*.\n\nBut, don't worry! At just *₹99*, you can:\n✅ Keep your certificate live, valid and scannable\n✅ Stay discoverable to lakhs of recruiters & our 1,100+ hiring partners\n✅ Do a re-attempt to improve score/keep your knowledge fresh\n✅ Keep your profile boosted by 2x\n\nOur certificates are recognised by 1,100+ companies & have already helped lakhs of learners land upto *150% hikes* at *Samsung*, *Meta*, *HDFC* & more. \n\n🎉 *At just ₹99, keep all your benefits active for 99 more days — that’s just ₹1 a day*.\nDon’t miss out on lakhs worth of potential income. Remember, *certificate will be deleted* & cannot be recovered after expiry.\n",
+        "actionType": "QuickReplies",
+        "sampleMediaUrl": "",
+        "sampleCTAUrl": "",
+        "isClickTrackingEnabled": false,
+        "buttons": [],
+        "parameters": 3,
+        "namespace": "0d6f8068_820f_4f58_b9e8_d67712686fa9",
+        "templateId": "1023924053167456",
+        "templateLanguage": "English",
+        "assistantId": "6515621dfe38c80b4d35a1a7",
+        "clientId": "6515621dfe38c80b4d35a19e",
+        "assistantName": "CareerNinja",
+        "partnerId": null,
+        "carouselCards": [],
+        "createdAt": "2025-04-09T06:47:49.355Z",
+        "updatedAt": "2025-04-09T06:48:18.713Z",
+        "__v": 0,
+        "rejectedReason": "NONE",
+        "statusJourney": [
+          {
+            "_id": "67f618321dd92e0f92657557",
+            "status": "APPROVED",
+            "timestamp": "2025-04-09T06:48:18.712Z",
+            "reason": "NONE"
+          }
+        ]
+      }
+    },
+    "status": "LIVE",
+    "type": "API",
+    "assistantId": "6515621dfe38c80b4d35a1a7",
+    "clientId": "6515621dfe38c80b4d35a19e",
+    "messageType": "TEMPLATE",
+    "messageErrors": {
+      "ERR_WA_131049": 75,
+      "ERR_WA_130472": 4,
+      "ERR_WA_131026": 6
+    },
+    "createdAt": "2025-04-09T07:01:20.366Z",
+    "updatedAt": "2025-04-09T08:41:08.287Z",
+    "__v": 0,
+    "audienceCount": 304,
+    "submittedCount": 304
+  },
+  {
+    "selectBasis": "homogeneous",
+    "_id": "67f61b2156c89f09d26e0f54",
+    "createdBy": "agent",
+    "retryCompletedAt": [],
+    "selected": [],
+    "unSelected": [],
+    "retryAttempts": 0,
+    "hasScheduledRetryCampaignTime": [],
+    "manualRetryCreatedAt": [],
+    "manualRetryCompletedAt": [],
+    "name": "experiment_certificate_validity_v1_low",
+    "payload": {
+      "templateName": "experiment_certificate_validity_v1_low",
+      "template": {
+        "_id": "67f614aaa2e16006b0a790d7",
+        "status": "APPROVED",
+        "processed": "2025-04-09T06:33:14.571Z",
+        "callToAction": [],
+        "quickReplies": [
+          "Renew Certificate!"
+        ],
+        "templateParams": [
+          "Akash",
+          "Product Management",
+          "90"
+        ],
+        "label": "experiment_certificate_validity_v1_low",
+        "category": "MARKETING",
+        "type": "TEXT",
+        "name": "experiment_certificate_validity_v1_low",
+        "format": "*{{1}}*, you’ve got *47 views* on your *{{2}}* certificate. And it's just getting started! \n\n⏰ It’s been 6 months & your certificate is set to expire in *48 hours* i.e. *by 11th April ‘25, 11:59 pm*.\nAfter that, your certificate won't show up on scanning, *affecting your credibility*.\n\nBut, don't worry! At just *₹99*, you can:\n✅ Keep your certificate live, valid and scannable\n✅ Stay discoverable to lakhs of recruiters & our 1,100+ hiring partners\n✅ Do a re-attempt to improve score/keep your knowledge fresh\n✅ Keep your profile boosted by 2x\n\nOur certificates are recognised by 1,100+ companies & have already helped lakhs of learners land upto *150% hikes* at *Samsung*, *Meta*, *HDFC* & more. \n\n🎉 *At just ₹99, keep all your benefits active for 99 more days — that’s just ₹1 a day*.\nDon’t miss out on lakhs worth of potential income. Remember, *certificate will be deleted* & cannot be recovered after expiry.\n | [Renew Certificate!]",
+        "sampleMessage": "*[Akash]*, you’ve got *47 views* on your *[Product Management]* certificate. And it's just getting started! \n\n⏰ It’s been 6 months & your certificate is set to expire in *48 hours* i.e. *by 11th April ‘25, 11:59 pm*.\nAfter that, your certificate won't show up on scanning, *affecting your credibility*.\n\nBut, don't worry! At just *₹99*, you can:\n✅ Keep your certificate live, valid and scannable\n✅ Stay discoverable to lakhs of recruiters & our 1,100+ hiring partners\n✅ Do a re-attempt to improve score/keep your knowledge fresh\n✅ Keep your profile boosted by 2x\n\nOur certificates are recognised by 1,100+ companies & have already helped lakhs of learners land upto *150% hikes* at *Samsung*, *Meta*, *HDFC* & more. \n\n🎉 *At just ₹99, keep all your benefits active for 99 more days — that’s just ₹1 a day*.\nDon’t miss out on lakhs worth of potential income. Remember, *certificate will be deleted* & cannot be recovered after expiry.\n",
+        "actionType": "QuickReplies",
+        "sampleMediaUrl": "",
+        "sampleCTAUrl": "",
+        "isClickTrackingEnabled": false,
+        "buttons": [],
+        "parameters": 2,
+        "namespace": "0d6f8068_820f_4f58_b9e8_d67712686fa9",
+        "templateId": "998758215721782",
+        "templateLanguage": "English",
+        "assistantId": "6515621dfe38c80b4d35a1a7",
+        "clientId": "6515621dfe38c80b4d35a19e",
+        "assistantName": "CareerNinja",
+        "partnerId": null,
+        "carouselCards": [],
+        "createdAt": "2025-04-09T06:33:14.575Z",
+        "updatedAt": "2025-04-09T06:33:35.977Z",
+        "__v": 0,
+        "rejectedReason": "NONE",
+        "statusJourney": [
+          {
+            "_id": "67f614bf1dd92e0f92656d72",
+            "status": "APPROVED",
+            "timestamp": "2025-04-09T06:33:35.977Z",
+            "reason": "NONE"
+          }
+        ]
+      }
+    },
+    "status": "LIVE",
+    "type": "API",
+    "assistantId": "6515621dfe38c80b4d35a1a7",
+    "clientId": "6515621dfe38c80b4d35a19e",
+    "messageType": "TEMPLATE",
+    "messageErrors": {
+      "ERR_WA_131049": 193,
+      "ERR_WA_130472": 10,
+      "ERR_WA_131026": 23
+    },
+    "createdAt": "2025-04-09T07:00:49.662Z",
+    "updatedAt": "2025-04-09T08:41:08.367Z",
+    "__v": 0,
+    "audienceCount": 762,
+    "submittedCount": 762
+  },
+  {
+    "selectBasis": "homogeneous",
+    "_id": "67f50e1299701909cc911289",
+    "createdBy": "agent",
+    "retryCompletedAt": [],
+    "selected": [],
+    "unSelected": [],
+    "retryAttempts": 0,
+    "hasScheduledRetryCampaignTime": [],
+    "manualRetryCreatedAt": [],
+    "manualRetryCompletedAt": [],
+    "name": "game_test_v2",
+    "payload": {
+      "templateName": "game_format_v4",
+      "template": {
+        "_id": "67f50dbc5ced620c19ea71be",
+        "status": "APPROVED",
+        "processed": "2025-04-08T11:51:24.311Z",
+        "callToAction": [],
+        "quickReplies": [],
+        "templateParams": [
+          "Name"
+        ],
+        "label": "game_format_v4",
+        "category": "MARKETING",
+        "type": "TEXT",
+        "name": "game_format_v4",
+        "format": "Hi {{1}}, we noticed you aced your earlier HR Management Assessment 👏\n\nNow, you're invited to take the next-level *HR Simulation Assessment*— designed for learners ready to stand out even more.\n\n*🎯 Solve real-world scenarios across hiring, engagement & conflict*\n*🎓 Earn your Certified HR Management Certificate in just 10 mins*\n*💼 Recognized by recruiters at TCS, Infosys, Wipro & top startups*\n\nWhy top learners are taking it:\n✅ 92% saw better interview results\n✅ 70% added it to LinkedIn within 48 hours\n✅ 1 in 3 got shortlisted faster\n\nClick on the button below to take the next step & get certified now\n\n*Valid for the first 30 learners only!!!*",
+        "sampleMessage": "Hi [Name], we noticed you aced your earlier HR Management Assessment 👏\n\nNow, you're invited to take the next-level *HR Simulation Assessment*— designed for learners ready to stand out even more.\n\n*🎯 Solve real-world scenarios across hiring, engagement & conflict*\n*🎓 Earn your Certified HR Management Certificate in just 10 mins*\n*💼 Recognized by recruiters at TCS, Infosys, Wipro & top startups*\n\nWhy top learners are taking it:\n✅ 92% saw better interview results\n✅ 70% added it to LinkedIn within 48 hours\n✅ 1 in 3 got shortlisted faster\n\nClick on the button below to take the next step & get certified now\n\n*Valid for the first 30 learners only!!!*",
+        "actionType": "All",
+        "sampleMediaUrl": "",
+        "sampleCTAUrl": "",
+        "isClickTrackingEnabled": true,
+        "buttons": [
+          {
+            "type": "URL",
+            "text": "Take HR Assessment",
+            "url": "https://ai-sensy.co/tck/{{1}}",
+            "urlMetadata": {
+              "url": "https://quizizz.com/pro/join?gc=51518916"
+            },
+            "example": [
+              "https://ai-sensy.co/tck/ywEeMF"
+            ]
+          }
+        ],
+        "parameters": 1,
+        "namespace": "0d6f8068_820f_4f58_b9e8_d67712686fa9",
+        "templateId": "1055463506723956",
+        "templateLanguage": "English",
+        "assistantId": "6515621dfe38c80b4d35a1a7",
+        "clientId": "6515621dfe38c80b4d35a19e",
+        "assistantName": "CareerNinja",
+        "partnerId": null,
+        "carouselCards": [],
+        "createdAt": "2025-04-08T11:51:24.316Z",
+        "updatedAt": "2025-04-08T11:51:47.152Z",
+        "__v": 0,
+        "rejectedReason": "NONE",
+        "statusJourney": [
+          {
+            "_id": "67f50dd3254f8a0f7be889d7",
+            "status": "APPROVED",
+            "timestamp": "2025-04-08T11:51:47.152Z",
+            "reason": "NONE"
+          }
+        ]
+      }
+    },
+    "status": "LIVE",
+    "type": "API",
+    "assistantId": "6515621dfe38c80b4d35a1a7",
+    "clientId": "6515621dfe38c80b4d35a19e",
+    "messageType": "TEMPLATE",
+    "messageErrors": {
+      "ERR_WA_130472": 16,
+      "ERR_WA_131026": 19,
+      "ERR_WA_131049": 286
+    },
+    "createdAt": "2025-04-08T11:52:50.704Z",
+    "updatedAt": "2025-04-09T07:56:35.363Z",
+    "__v": 0,
+    "audienceCount": 1484,
+    "submittedCount": 1484
+  },
+  {
+    "selectBasis": "homogeneous",
     "_id": "67e7b767b58e5209c40be6f5",
     "createdBy": "agent",
     "retryCompletedAt": [],
@@ -163,82 +572,6 @@
   },
   {
     "selectBasis": "homogeneous",
-    "_id": "67e6ae1d7d4c543806f2f839",
-    "createdBy": "agent",
-    "retryCompletedAt": [],
-    "selected": [],
-    "unSelected": [],
-    "retryAttempts": 0,
-    "hasScheduledRetryCampaignTime": [],
-    "manualRetryCreatedAt": [],
-    "manualRetryCompletedAt": [],
-    "name": "cert_value_bot_t1_v2",
-    "payload": {
-      "templateName": "cert_value_bot_t1_v2",
-      "template": {
-        "_id": "67e6adf31ddbb40bf007e30e",
-        "status": "APPROVED",
-        "processed": "2025-03-28T14:10:59.373Z",
-        "callToAction": [],
-        "quickReplies": [
-          "Clear My Doubts"
-        ],
-        "templateParams": [
-          "Akash",
-          "Product Management"
-        ],
-        "label": "cert_value_bot_t1_v2",
-        "category": "MARKETING",
-        "type": "TEXT",
-        "name": "cert_value_bot_t1_v2",
-        "format": "Hi {{1}},\n \nWe understand that you might have some concerns about the value of the *{{2}} certificate*, and I am here to help! 😊\n\nMany professionals have used this *certification to take their careers to the next level*🚀. To make sure you have all the information you need, I’d love to help clear any doubts you may have.\n\nClick below to get your questions answered and see how this certification could benefit you! | [Clear My Doubts]",
-        "sampleMessage": "Hi [Akash],\n \nWe understand that you might have some concerns about the value of the *[Product Management] certificate*, and I am here to help! 😊\n\nMany professionals have used this *certification to take their careers to the next level*🚀. To make sure you have all the information you need, I’d love to help clear any doubts you may have.\n\nClick below to get your questions answered and see how this certification could benefit you!",
-        "actionType": "QuickReplies",
-        "sampleMediaUrl": "",
-        "sampleCTAUrl": "",
-        "isClickTrackingEnabled": false,
-        "buttons": [],
-        "parameters": 2,
-        "namespace": "0d6f8068_820f_4f58_b9e8_d67712686fa9",
-        "templateId": "663660602712499",
-        "templateLanguage": "English",
-        "assistantId": "6515621dfe38c80b4d35a1a7",
-        "clientId": "6515621dfe38c80b4d35a19e",
-        "assistantName": "CareerNinja",
-        "partnerId": null,
-        "carouselCards": [],
-        "createdAt": "2025-03-28T14:10:59.376Z",
-        "updatedAt": "2025-03-28T14:11:17.254Z",
-        "__v": 0,
-        "rejectedReason": "NONE",
-        "statusJourney": [
-          {
-            "_id": "67e6ae05d67d590f77c0850b",
-            "status": "APPROVED",
-            "timestamp": "2025-03-28T14:11:17.253Z",
-            "reason": "NONE"
-          }
-        ]
-      }
-    },
-    "status": "LIVE",
-    "type": "API",
-    "assistantId": "6515621dfe38c80b4d35a1a7",
-    "clientId": "6515621dfe38c80b4d35a19e",
-    "messageType": "TEMPLATE",
-    "messageErrors": {
-      "ERR_WA_131049": 2010,
-      "ERR_WA_131026": 239,
-      "ERR_WA_130472": 68
-    },
-    "createdAt": "2025-03-28T14:11:41.177Z",
-    "updatedAt": "2025-04-02T15:54:46.259Z",
-    "__v": 0,
-    "audienceCount": 7851,
-    "submittedCount": 7851
-  },
-  {
-    "selectBasis": "homogeneous",
     "_id": "67e563de53b82209c60e7b17",
     "createdBy": "agent",
     "retryCompletedAt": [],
@@ -323,13 +656,13 @@
     "clientId": "6515621dfe38c80b4d35a19e",
     "messageType": "TEMPLATE",
     "messageErrors": {
-      "ERR_WA_131026": 12
+      "ERR_WA_131026": 24
     },
     "createdAt": "2025-03-27T14:42:38.587Z",
-    "updatedAt": "2025-04-02T18:45:08.685Z",
+    "updatedAt": "2025-04-11T11:09:49.267Z",
     "__v": 0,
-    "audienceCount": 710,
-    "submittedCount": 710
+    "audienceCount": 1491,
+    "submittedCount": 1491
   },
   {
     "selectBasis": "homogeneous",
@@ -415,10 +748,10 @@
       "ERR_WA_131026": 1
     },
     "createdAt": "2025-03-27T13:36:24.337Z",
-    "updatedAt": "2025-04-02T16:42:02.266Z",
+    "updatedAt": "2025-04-10T08:49:25.239Z",
     "__v": 0,
-    "audienceCount": 24,
-    "submittedCount": 24
+    "audienceCount": 56,
+    "submittedCount": 56
   },
   {
     "selectBasis": "homogeneous",
@@ -493,10 +826,10 @@
       "ERR_WA_131026": 6
     },
     "createdAt": "2025-03-26T14:33:45.164Z",
-    "updatedAt": "2025-04-02T16:09:06.152Z",
+    "updatedAt": "2025-04-09T15:44:54.077Z",
     "__v": 0,
-    "audienceCount": 40,
-    "submittedCount": 40
+    "audienceCount": 79,
+    "submittedCount": 79
   },
   {
     "selectBasis": "homogeneous",
@@ -658,14 +991,17 @@
     "clientId": "6515621dfe38c80b4d35a19e",
     "messageType": "TEMPLATE",
     "messageErrors": {
-      "ERR_WA_131026": 45,
-      "ERR_WA_131000": 2
+      "ERR_WA_131026": 77,
+      "ERR_WA_131000": 2,
+      "ERR_WA_5010": 1,
+      "ERR_WA_ERR_INVALID_MEDIA": 1,
+      "ERR_WA_131008": 1
     },
     "createdAt": "2025-03-25T05:46:08.548Z",
-    "updatedAt": "2025-04-02T18:46:20.148Z",
+    "updatedAt": "2025-04-11T11:02:30.358Z",
     "__v": 0,
-    "audienceCount": 2149,
-    "submittedCount": 2149
+    "audienceCount": 4005,
+    "submittedCount": 4005
   },
   {
     "selectBasis": "homogeneous",
@@ -733,18 +1069,18 @@
     "clientId": "6515621dfe38c80b4d35a19e",
     "messageType": "TEMPLATE",
     "messageErrors": {
-      "ERR_WA_131008": 823,
-      "ERR_WA_131026": 34,
-      "ERR_WA_131049": 703,
-      "ERR_WA_132005": 13,
-      "ERR_WA_130472": 16,
-      "ERR_WA_100": 1
+      "ERR_WA_131008": 1299,
+      "ERR_WA_131026": 49,
+      "ERR_WA_131049": 1021,
+      "ERR_WA_132005": 19,
+      "ERR_WA_130472": 29,
+      "ERR_WA_100": 2
     },
     "createdAt": "2025-03-24T15:44:26.520Z",
-    "updatedAt": "2025-04-02T16:10:55.986Z",
+    "updatedAt": "2025-04-10T16:11:21.720Z",
     "__v": 0,
-    "audienceCount": 2968,
-    "submittedCount": 2968
+    "audienceCount": 4499,
+    "submittedCount": 4499
   },
   {
     "selectBasis": "homogeneous",
@@ -819,16 +1155,16 @@
     "clientId": "6515621dfe38c80b4d35a19e",
     "messageType": "TEMPLATE",
     "messageErrors": {
-      "ERR_WA_131008": 405,
-      "ERR_WA_131049": 420,
-      "ERR_WA_130472": 8,
-      "ERR_WA_131026": 9
+      "ERR_WA_131008": 650,
+      "ERR_WA_131049": 599,
+      "ERR_WA_130472": 10,
+      "ERR_WA_131026": 20
     },
     "createdAt": "2025-03-24T15:35:15.102Z",
-    "updatedAt": "2025-04-02T16:10:55.768Z",
+    "updatedAt": "2025-04-10T16:11:20.133Z",
     "__v": 0,
-    "audienceCount": 1433,
-    "submittedCount": 1433
+    "audienceCount": 2146,
+    "submittedCount": 2146
   },
   {
     "selectBasis": "homogeneous",
@@ -1080,17 +1416,17 @@
     "clientId": "6515621dfe38c80b4d35a19e",
     "messageType": "TEMPLATE",
     "messageErrors": {
-      "ERR_WA_131049": 497,
-      "ERR_WA_131008": 14,
-      "ERR_WA_131026": 11,
-      "ERR_WA_130472": 7,
+      "ERR_WA_131049": 632,
+      "ERR_WA_131008": 22,
+      "ERR_WA_131026": 20,
+      "ERR_WA_130472": 9,
       "ERR_WA_131000": 1
     },
     "createdAt": "2025-03-20T12:12:29.236Z",
-    "updatedAt": "2025-04-02T15:56:22.190Z",
+    "updatedAt": "2025-04-10T15:56:25.089Z",
     "__v": 0,
-    "audienceCount": 1296,
-    "submittedCount": 1296
+    "audienceCount": 1723,
+    "submittedCount": 1723
   },
   {
     "selectBasis": "homogeneous",
@@ -1158,15 +1494,15 @@
     "clientId": "6515621dfe38c80b4d35a19e",
     "messageType": "TEMPLATE",
     "messageErrors": {
-      "ERR_WA_131049": 61,
-      "ERR_WA_131026": 8,
-      "ERR_WA_130472": 1
+      "ERR_WA_131049": 109,
+      "ERR_WA_131026": 12,
+      "ERR_WA_130472": 3
     },
     "createdAt": "2025-03-20T12:02:29.267Z",
-    "updatedAt": "2025-04-02T15:56:20.285Z",
+    "updatedAt": "2025-04-10T15:56:22.104Z",
     "__v": 0,
-    "audienceCount": 253,
-    "submittedCount": 253
+    "audienceCount": 391,
+    "submittedCount": 391
   },
   {
     "selectBasis": "homogeneous",
@@ -1235,17 +1571,17 @@
     "clientId": "6515621dfe38c80b4d35a19e",
     "messageType": "TEMPLATE",
     "messageErrors": {
-      "ERR_WA_131049": 273,
-      "ERR_WA_131026": 30,
-      "ERR_WA_132005": 3,
-      "ERR_WA_130472": 8,
+      "ERR_WA_131049": 402,
+      "ERR_WA_131026": 38,
+      "ERR_WA_132005": 4,
+      "ERR_WA_130472": 11,
       "ERR_WA_131000": 1
     },
     "createdAt": "2025-03-20T11:51:12.198Z",
-    "updatedAt": "2025-04-02T15:56:21.414Z",
+    "updatedAt": "2025-04-10T15:56:26.798Z",
     "__v": 0,
-    "audienceCount": 1041,
-    "submittedCount": 1041
+    "audienceCount": 1496,
+    "submittedCount": 1496
   },
   {
     "selectBasis": "homogeneous",
@@ -1410,13 +1746,14 @@
     "clientId": "6515621dfe38c80b4d35a19e",
     "messageType": "TEMPLATE",
     "messageErrors": {
-      "ERR_WA_131026": 12
+      "ERR_WA_131026": 20,
+      "ERR_WA_ERR_INVALID_MEDIA": 1
     },
     "createdAt": "2025-03-19T14:08:59.369Z",
-    "updatedAt": "2025-04-02T18:50:07.779Z",
+    "updatedAt": "2025-04-11T10:04:08.382Z",
     "__v": 0,
-    "audienceCount": 911,
-    "submittedCount": 911
+    "audienceCount": 1531,
+    "submittedCount": 1531
   },
   {
     "selectBasis": "homogeneous",
@@ -1487,18 +1824,18 @@
     "clientId": "6515621dfe38c80b4d35a19e",
     "messageType": "TEMPLATE",
     "messageErrors": {
-      "ERR_WA_131049": 1432,
-      "ERR_WA_130472": 36,
-      "ERR_WA_131026": 101,
-      "ERR_WA_132005": 9,
-      "ERR_WA_100": 4,
+      "ERR_WA_131049": 1852,
+      "ERR_WA_130472": 56,
+      "ERR_WA_131026": 123,
+      "ERR_WA_132005": 11,
+      "ERR_WA_100": 5,
       "ERR_WA_131000": 2
     },
     "createdAt": "2025-03-17T07:56:55.775Z",
-    "updatedAt": "2025-04-02T15:56:21.712Z",
+    "updatedAt": "2025-04-10T15:56:28.281Z",
     "__v": 0,
-    "audienceCount": 5013,
-    "submittedCount": 5013
+    "audienceCount": 6753,
+    "submittedCount": 6753
   },
   {
     "selectBasis": "homogeneous",
@@ -1899,13 +2236,13 @@
     "clientId": "6515621dfe38c80b4d35a19e",
     "messageType": "TEMPLATE",
     "messageErrors": {
-      "ERR_WA_100": 1
+      "ERR_WA_100": 3
     },
     "createdAt": "2025-03-10T15:34:20.554Z",
-    "updatedAt": "2025-04-02T15:44:05.416Z",
+    "updatedAt": "2025-04-11T11:14:06.629Z",
     "__v": 0,
-    "audienceCount": 116,
-    "submittedCount": 116
+    "audienceCount": 426,
+    "submittedCount": 426
   },
   {
     "selectBasis": "homogeneous",
@@ -2306,18 +2643,19 @@
     "clientId": "6515621dfe38c80b4d35a19e",
     "messageType": "TEMPLATE",
     "messageErrors": {
-      "ERR_WA_131049": 473,
-      "ERR_WA_131008": 33,
-      "ERR_WA_130472": 10,
+      "ERR_WA_131049": 648,
+      "ERR_WA_131008": 45,
+      "ERR_WA_130472": 13,
       "ERR_WA_ERR_INVALID_MEDIA": 1,
-      "ERR_WA_131026": 14,
-      "ERR_WA_131000": 2
+      "ERR_WA_131026": 25,
+      "ERR_WA_131000": 2,
+      "ERR_WA_132005": 1
     },
     "createdAt": "2025-03-10T08:11:45.664Z",
-    "updatedAt": "2025-04-02T16:00:21.699Z",
+    "updatedAt": "2025-04-10T16:00:21.216Z",
     "__v": 0,
-    "audienceCount": 1230,
-    "submittedCount": 1230
+    "audienceCount": 1735,
+    "submittedCount": 1735
   },
   {
     "selectBasis": "homogeneous",
@@ -2397,18 +2735,19 @@
     "clientId": "6515621dfe38c80b4d35a19e",
     "messageType": "TEMPLATE",
     "messageErrors": {
-      "ERR_WA_131049": 1227,
-      "ERR_WA_131026": 95,
-      "ERR_WA_132005": 15,
-      "ERR_WA_130472": 30,
+      "ERR_WA_131049": 1768,
+      "ERR_WA_131026": 123,
+      "ERR_WA_132005": 21,
+      "ERR_WA_130472": 55,
       "ERR_WA_100": 3,
-      "ERR_WA_131000": 7
+      "ERR_WA_131000": 8,
+      "ERR_WA_131008": 1
     },
     "createdAt": "2025-03-10T08:07:14.267Z",
-    "updatedAt": "2025-04-02T16:00:21.700Z",
+    "updatedAt": "2025-04-10T16:00:21.059Z",
     "__v": 0,
-    "audienceCount": 4133,
-    "submittedCount": 4133
+    "audienceCount": 6033,
+    "submittedCount": 6033
   },
   {
     "selectBasis": "homogeneous",
@@ -2830,15 +3169,15 @@
     "clientId": "6515621dfe38c80b4d35a19e",
     "messageType": "TEMPLATE",
     "messageErrors": {
-      "ERR_WA_ERR_INVALID_MEDIA": 4,
-      "ERR_WA_100": 4,
+      "ERR_WA_ERR_INVALID_MEDIA": 8,
+      "ERR_WA_100": 6,
       "ERR_WA_132005": 1
     },
     "createdAt": "2025-03-08T10:13:59.042Z",
-    "updatedAt": "2025-04-02T17:03:36.228Z",
+    "updatedAt": "2025-04-11T11:14:56.959Z",
     "__v": 0,
-    "audienceCount": 199,
-    "submittedCount": 199
+    "audienceCount": 327,
+    "submittedCount": 327
   },
   {
     "selectBasis": "homogeneous",
@@ -3589,18 +3928,18 @@
     "clientId": "6515621dfe38c80b4d35a19e",
     "messageType": "TEMPLATE",
     "messageErrors": {
-      "ERR_WA_131049": 859,
-      "ERR_WA_131008": 228,
-      "ERR_WA_131026": 54,
-      "ERR_WA_130472": 22,
+      "ERR_WA_131049": 887,
+      "ERR_WA_131008": 236,
+      "ERR_WA_131026": 55,
+      "ERR_WA_130472": 25,
       "ERR_WA_131000": 8,
       "ERR_WA_132005": 1
     },
     "createdAt": "2025-03-05T10:46:54.463Z",
-    "updatedAt": "2025-04-02T15:56:20.133Z",
+    "updatedAt": "2025-04-10T15:55:48.202Z",
     "__v": 0,
-    "audienceCount": 3241,
-    "submittedCount": 3241
+    "audienceCount": 3330,
+    "submittedCount": 3330
   },
   {
     "selectBasis": "homogeneous",
@@ -4523,20 +4862,22 @@
     "clientId": "6515621dfe38c80b4d35a19e",
     "messageType": "TEMPLATE",
     "messageErrors": {
-      "ERR_WA_131049": 6647,
-      "ERR_WA_131026": 946,
-      "ERR_WA_130472": 332,
-      "ERR_WA_132005": 131,
+      "ERR_WA_131049": 7801,
+      "ERR_WA_131026": 1131,
+      "ERR_WA_130472": 400,
+      "ERR_WA_132005": 155,
       "ERR_WA_131000": 24,
       "ERR_WA_ERR_INVALID_MEDIA": 2,
       "ERR_WA_5010": 2,
       "ERR_WA_131050": 1
     },
     "createdAt": "2025-02-20T08:22:42.678Z",
-    "updatedAt": "2025-04-02T18:47:19.207Z",
+    "updatedAt": "2025-04-11T11:12:55.202Z",
     "__v": 0,
-    "audienceCount": 35467,
-    "submittedCount": 35467
+    "audienceCount": 41844,
+    "submittedCount": 41844,
+    "pausedAt": "2025-04-06T18:21:40.336Z",
+    "resumedAt": "2025-04-07T05:58:55.814Z"
   },
   {
     "selectBasis": "homogeneous",
@@ -4617,17 +4958,17 @@
     "clientId": "6515621dfe38c80b4d35a19e",
     "messageType": "TEMPLATE",
     "messageErrors": {
-      "ERR_WA_131049": 5101,
-      "ERR_WA_131026": 941,
-      "ERR_WA_130472": 251,
+      "ERR_WA_131049": 5876,
+      "ERR_WA_131026": 1115,
+      "ERR_WA_130472": 300,
       "ERR_WA_131000": 12,
       "ERR_WA_131050": 1
     },
     "createdAt": "2025-02-20T08:10:51.942Z",
-    "updatedAt": "2025-04-02T18:46:59.524Z",
+    "updatedAt": "2025-04-11T11:12:52.450Z",
     "__v": 0,
-    "audienceCount": 28700,
-    "submittedCount": 28700
+    "audienceCount": 33241,
+    "submittedCount": 33241
   },
   {
     "selectBasis": "homogeneous",
@@ -4711,15 +5052,15 @@
     "clientId": "6515621dfe38c80b4d35a19e",
     "messageType": "TEMPLATE",
     "messageErrors": {
-      "ERR_WA_131049": 374,
-      "ERR_WA_131026": 43,
-      "ERR_WA_130472": 14
+      "ERR_WA_131049": 509,
+      "ERR_WA_131026": 54,
+      "ERR_WA_130472": 23
     },
     "createdAt": "2025-02-15T14:33:37.108Z",
-    "updatedAt": "2025-04-02T17:48:04.373Z",
+    "updatedAt": "2025-04-11T10:48:08.240Z",
     "__v": 0,
-    "audienceCount": 1619,
-    "submittedCount": 1619
+    "audienceCount": 2266,
+    "submittedCount": 2266
   },
   {
     "selectBasis": "homogeneous",
@@ -8902,847 +9243,5 @@
     "__v": 0,
     "audienceCount": 1070,
     "submittedCount": 1070
-  },
-  {
-    "selectBasis": "homogeneous",
-    "_id": "6798d33127d32f09c642c92b",
-    "createdBy": "agent",
-    "retryCompletedAt": [],
-    "selected": [],
-    "unSelected": [],
-    "retryAttempts": 0,
-    "hasScheduledRetryCampaignTime": [],
-    "manualRetryCreatedAt": [],
-    "manualRetryCompletedAt": [],
-    "name": "company_hook_exp_low_v1",
-    "payload": {
-      "templateName": "company_hook_v2_lowscore",
-      "template": {
-        "_id": "6798cfa09f4b18188027914d",
-        "status": "APPROVED",
-        "processed": "2025-01-28T12:37:52.829Z",
-        "callToAction": [
-          {
-            "type": "URL",
-            "buttonValue": "https://certified.learntube.ai/analysis/leaderboard/v2?utm_source=lowscore&token={{5}}",
-            "buttonTitle": "Start My Journey"
-          }
-        ],
-        "quickReplies": [],
-        "templateParams": [
-          "Arjun",
-          "Program Manager",
-          "70",
-          "Project Management",
-          "operations manager"
-        ],
-        "label": "company_hook_v2_lowscore",
-        "category": "MARKETING",
-        "type": "TEXT",
-        "name": "company_hook_v2_lowscore",
-        "format": "Hi {{1}},\n\nGreat news! Flipkart has recently reviewed your profile through our network of recruiters for the role of {{2}}.\n\nThey were particularly impressed with your {{3}} certification and your experience as {{4}}\n\nYour combination of skills, certifications, and experience makes your profile stand out for this opportunity.\n\nWould you like to explore how our Personalized Roadmap can help you secure this and other exciting roles?\n\nClick the button below to know more.  | [Start My Journey,https://certified.learntube.ai/analysis/leaderboard/v2?utm_source=lowscore&token={{5}}]",
-        "sampleMessage": "Hi [Arjun],\n\nGreat news! Flipkart has recently reviewed your profile through our network of recruiters for the role of [Program Manager].\n\nThey were particularly impressed with your [70] certification and your experience as [Project Management]\n\nYour combination of skills, certifications, and experience makes your profile stand out for this opportunity.\n\nWould you like to explore how our Personalized Roadmap can help you secure this and other exciting roles?\n\nClick the button below to know more. ",
-        "actionType": "CAT",
-        "sampleMediaUrl": "",
-        "sampleCTAUrl": "https://certified.learntube.ai/analysis/leaderboard/v2?utm_source=lowscore&token=events",
-        "isClickTrackingEnabled": true,
-        "headerText": "You have 3 profile views from your certificate barcode !!",
-        "buttons": [],
-        "parameters": 5,
-        "namespace": "0d6f8068_820f_4f58_b9e8_d67712686fa9",
-        "templateId": "1621001422140866",
-        "templateLanguage": "English",
-        "assistantId": "6515621dfe38c80b4d35a1a7",
-        "clientId": "6515621dfe38c80b4d35a19e",
-        "assistantName": "CareerNinja",
-        "partnerId": null,
-        "carouselCards": [],
-        "createdAt": "2025-01-28T12:37:52.833Z",
-        "updatedAt": "2025-01-28T12:38:21.421Z",
-        "__v": 0,
-        "rejectedReason": "NONE",
-        "statusJourney": [
-          {
-            "_id": "6798cfbd4ad692119319c44f",
-            "status": "APPROVED",
-            "timestamp": "2025-01-28T12:38:21.421Z",
-            "reason": "NONE"
-          }
-        ]
-      }
-    },
-    "status": "LIVE",
-    "type": "API",
-    "assistantId": "6515621dfe38c80b4d35a1a7",
-    "clientId": "6515621dfe38c80b4d35a19e",
-    "messageType": "TEMPLATE",
-    "messageErrors": {
-      "ERR_WA_131049": 219,
-      "ERR_WA_131026": 13,
-      "ERR_WA_132005": 1,
-      "ERR_WA_130472": 6
-    },
-    "createdAt": "2025-01-28T12:53:05.226Z",
-    "updatedAt": "2025-01-28T13:32:47.504Z",
-    "__v": 0,
-    "audienceCount": 623,
-    "submittedCount": 623
-  },
-  {
-    "selectBasis": "homogeneous",
-    "_id": "67987f5ecf97329c2692ddb1",
-    "createdBy": "agent",
-    "retryCompletedAt": [],
-    "selected": [],
-    "unSelected": [],
-    "retryAttempts": 0,
-    "hasScheduledRetryCampaignTime": [],
-    "manualRetryCreatedAt": [],
-    "manualRetryCompletedAt": [],
-    "name": "followup_certified_v16_high_3",
-    "payload": {
-      "templateName": "followup_certified_fallback_v_16_experiment_high_v4",
-      "template": {
-        "_id": "67987eb4a6d8577dd38d0f44",
-        "status": "APPROVED",
-        "processed": "2025-01-28T06:52:36.868Z",
-        "callToAction": [],
-        "quickReplies": [],
-        "templateParams": [
-          "Akash",
-          "Product Management"
-        ],
-        "label": "followup_certified_fallback_v_16_experiment_high_v4",
-        "category": "MARKETING",
-        "type": "FILE",
-        "name": "followup_certified_fallback_v_16_experiment_high_v4",
-        "format": "Hi {{1}},\n\nCongratulations on your impressive *{{2}}/100* score in *{{3}}*! This is a fantastic achievement and and a great opportunity to shine this placement season.\n\nWith the *Jan-Feb placement* season in full swing, now is the time to capitalize on your success:\n\n🎯 *Redeem Your Certificate Instantly*\nAdd this trusted certificate to your CV to impress top recruiters like Flipkart, Swiggy, and TCS.\n🎓 *Exclusive High Achiever Bonuses*\nComplete the process now to unlock:\n1️⃣ *A Detailed Report:* Get personalized insights into your strengths and improvement areas based on your score.\n2️⃣ *Personalized Roadmap:* Get a mentor-created plan to fast-track your career and achieve your goals.\n\n*Why Act Now?*\n- Placement season is the best time to enhance your CV visibility (up by 86%) with a certificate recognized by 967+ companies.\n- Use your great score to stand out from the competition.\n\nDon’t miss this chance—*redeem* your certificate today and make your potential count!",
-        "sampleMessage": "Hi [Akash],\n\nCongratulations on your impressive *[Product Management]/100* score in *[undefined]*! This is a fantastic achievement and and a great opportunity to shine this placement season.\n\nWith the *Jan-Feb placement* season in full swing, now is the time to capitalize on your success:\n\n🎯 *Redeem Your Certificate Instantly*\nAdd this trusted certificate to your CV to impress top recruiters like Flipkart, Swiggy, and TCS.\n🎓 *Exclusive High Achiever Bonuses*\nComplete the process now to unlock:\n1️⃣ *A Detailed Report:* Get personalized insights into your strengths and improvement areas based on your score.\n2️⃣ *Personalized Roadmap:* Get a mentor-created plan to fast-track your career and achieve your goals.\n\n*Why Act Now?*\n- Placement season is the best time to enhance your CV visibility (up by 86%) with a certificate recognized by 967+ companies.\n- Use your great score to stand out from the competition.\n\nDon’t miss this chance—*redeem* your certificate today and make your potential count!",
-        "actionType": "All",
-        "sampleMediaUrl": "4::YXBwbGljYXRpb24vcGRm:ARZOEDoc69FmU0J_kdHII7eUV9njRfbgbbFGf45KjUU17GefPYo102GcKo6z5Q8dbKRhJvCy4UB16UXhCY8_fRJPo4ceLvXkfjXCpP5jU0Xa4w:e:1738392747:799369954601524:100085341793629:ARbYxpIudfALh9kBr6Q",
-        "sampleCTAUrl": "",
-        "isClickTrackingEnabled": true,
-        "footerText": "Attached Sample Report for Reference",
-        "buttons": [
-          {
-            "type": "URL",
-            "text": "Unlock Certificate Now!",
-            "url": "https://ai-sensy.co/tck/{{1}}",
-            "example": [
-              "https://ai-sensy.co/tck/ywEeMF"
-            ],
-            "urlMetadata": {
-              "url": "https://certified.learntube.ai/analysis/{{1}}?utm_source=experiment_blurred_high_score",
-              "parameters": [
-                "https://certified.learntube.ai/analysis/events?utm_source=experiment_blurred_high_score"
-              ]
-            }
-          }
-        ],
-        "parameters": 3,
-        "namespace": "0d6f8068_820f_4f58_b9e8_d67712686fa9",
-        "templateId": "1541215443210149",
-        "templateLanguage": "English",
-        "assistantId": "6515621dfe38c80b4d35a1a7",
-        "clientId": "6515621dfe38c80b4d35a19e",
-        "assistantName": "CareerNinja",
-        "partnerId": null,
-        "carouselCards": [],
-        "createdAt": "2025-01-28T06:52:36.873Z",
-        "updatedAt": "2025-01-28T06:52:57.295Z",
-        "__v": 0,
-        "rejectedReason": "NONE",
-        "statusJourney": [
-          {
-            "_id": "67987ec982e008225b813901",
-            "status": "APPROVED",
-            "timestamp": "2025-01-28T06:52:57.295Z",
-            "reason": "NONE"
-          }
-        ]
-      }
-    },
-    "status": "LIVE",
-    "type": "API",
-    "assistantId": "6515621dfe38c80b4d35a1a7",
-    "clientId": "6515621dfe38c80b4d35a19e",
-    "messageType": "TEMPLATE",
-    "messageErrors": {
-      "ERR_WA_131049": 2757,
-      "ERR_WA_131026": 421,
-      "ERR_WA_130472": 134,
-      "ERR_WA_132005": 14,
-      "ERR_WA_131000": 4
-    },
-    "createdAt": "2025-01-28T06:55:26.100Z",
-    "updatedAt": "2025-02-20T06:43:12.952Z",
-    "__v": 0,
-    "audienceCount": 14397,
-    "submittedCount": 14397,
-    "pausedAt": "2025-02-07T16:36:21.526Z",
-    "resumedAt": "2025-02-08T06:50:38.015Z"
-  },
-  {
-    "selectBasis": "homogeneous",
-    "_id": "67979750df2f8b718bd644da",
-    "createdBy": "agent",
-    "retryCompletedAt": [],
-    "selected": [],
-    "unSelected": [],
-    "retryAttempts": 0,
-    "hasScheduledRetryCampaignTime": [],
-    "manualRetryCreatedAt": [],
-    "manualRetryCompletedAt": [],
-    "name": "nov_21_t2_exp_1",
-    "payload": {
-      "templateName": "olddata_t2_v2",
-      "template": {
-        "_id": "679773ba8f344b79e5f1033b",
-        "status": "APPROVED",
-        "processed": "2025-01-27T11:53:30.714Z",
-        "callToAction": [
-          {
-            "type": "URL",
-            "buttonValue": "https://certified.learntube.ai/analysis/leaderboard/v2?utm_source=t2_old_exp_1&token={{3}}",
-            "buttonTitle": "Build My Success Path"
-          }
-        ],
-        "quickReplies": [],
-        "templateParams": [
-          "Arjun",
-          "Project Management"
-        ],
-        "label": "olddata_t2_v2",
-        "category": "MARKETING",
-        "type": "IMAGE",
-        "name": "olddata_t2_v2",
-        "format": "Hi {{1}}!\n\n🎉 Your Career Roadmap is Ready!\n\nRemember earning your {{2}} with us? That was just the beginning! \n\n*🚨 Jan/Feb Placement Season is ON*, and learners like you are making big moves:\n*💼 Shweta Singh* – Data Engineer at 14 LPA (Baker Hughes)\n*💼 Sharadh Dev *– Senior Executive at 11 LPA + 1 LPA variables (Synergy)\n*💼 Saptarshi Das* – Team Lead at 10.5 LPA (Infosys)\n\nNow it’s YOUR turn! Niket, the mentor behind your program, has crafted a Career Roadmap just for you to:\n*✅ Land top roles this placement season*\n*✅ Boost your salary by up to 43%*\n*✅ Accelerate your career growth*\n\n👉 Tap below to access your roadmap now:\n | [Build My Success Path,https://certified.learntube.ai/analysis/leaderboard/v2?utm_source=t2_old_exp_1&token={{3}}]",
-        "sampleMessage": "Hi [Arjun]!\n\n🎉 Your Career Roadmap is Ready!\n\nRemember earning your [Project Management] with us? That was just the beginning! \n\n*🚨 Jan/Feb Placement Season is ON*, and learners like you are making big moves:\n*💼 Shweta Singh* – Data Engineer at 14 LPA (Baker Hughes)\n*💼 Sharadh Dev *– Senior Executive at 11 LPA + 1 LPA variables (Synergy)\n*💼 Saptarshi Das* – Team Lead at 10.5 LPA (Infosys)\n\nNow it’s YOUR turn! Niket, the mentor behind your program, has crafted a Career Roadmap just for you to:\n*✅ Land top roles this placement season*\n*✅ Boost your salary by up to 43%*\n*✅ Accelerate your career growth*\n\n👉 Tap below to access your roadmap now:\n",
-        "actionType": "CAT",
-        "sampleMediaUrl": "4::aW1hZ2UvcG5n:ARZOjAO1qhmGh-Hws7oHdRHETwpVesTG_0g4TOqsCH__1eeildi-fCkAcj_ynDd8tsXmAqOYGKs2zTCtW1jueQewNMrXWXAb9uapxATKwqAC0w:e:1738324404:799369954601524:100085341793629:ARYUbnY2iBHigEXlD_0",
-        "sampleCTAUrl": "https://certified.learntube.ai/analysis/leaderboard/v2?utm_source=t2_old_exp_1&token=events",
-        "isClickTrackingEnabled": true,
-        "footerText": "Refer to the PDF for placement report.",
-        "buttons": [],
-        "parameters": 3,
-        "namespace": "0d6f8068_820f_4f58_b9e8_d67712686fa9",
-        "templateId": "1603529604373847",
-        "templateLanguage": "English",
-        "assistantId": "6515621dfe38c80b4d35a1a7",
-        "clientId": "6515621dfe38c80b4d35a19e",
-        "assistantName": "CareerNinja",
-        "partnerId": null,
-        "carouselCards": [],
-        "createdAt": "2025-01-27T11:53:30.717Z",
-        "updatedAt": "2025-01-27T11:53:48.737Z",
-        "__v": 0,
-        "rejectedReason": "NONE",
-        "statusJourney": [
-          {
-            "_id": "679773cc108acf0f6a6060fa",
-            "status": "APPROVED",
-            "timestamp": "2025-01-27T11:53:48.736Z",
-            "reason": "NONE"
-          }
-        ]
-      }
-    },
-    "status": "LIVE",
-    "type": "API",
-    "assistantId": "6515621dfe38c80b4d35a1a7",
-    "clientId": "6515621dfe38c80b4d35a19e",
-    "messageType": "TEMPLATE",
-    "messageErrors": {
-      "ERR_WA_131053": 1,
-      "ERR_WA_131049": 351,
-      "ERR_WA_131026": 34,
-      "ERR_WA_130472": 6
-    },
-    "createdAt": "2025-01-27T14:25:20.284Z",
-    "updatedAt": "2025-01-27T14:33:14.372Z",
-    "__v": 0,
-    "audienceCount": 1259,
-    "submittedCount": 1259
-  },
-  {
-    "selectBasis": "homogeneous",
-    "_id": "6797793f6a8cdc09c7c08c99",
-    "createdBy": "agent",
-    "retryCompletedAt": [],
-    "selected": [],
-    "unSelected": [],
-    "retryAttempts": 0,
-    "hasScheduledRetryCampaignTime": [],
-    "manualRetryCreatedAt": [],
-    "manualRetryCompletedAt": [],
-    "name": "dec_5_t2_exp_1",
-    "payload": {
-      "templateName": "olddata_t2",
-      "template": {
-        "_id": "679765e0b750c50c228ffbc4",
-        "status": "APPROVED",
-        "processed": "2025-01-27T10:54:24.023Z",
-        "callToAction": [
-          {
-            "type": "URL",
-            "buttonValue": "https://certified.learntube.ai/analysis/leaderboard/v2?utm_source=t2_Nov_exp_1&token={{3}}",
-            "buttonTitle": "Create My Success Path"
-          }
-        ],
-        "quickReplies": [],
-        "templateParams": [
-          "Arjun",
-          "JAVA"
-        ],
-        "label": "olddata_t2",
-        "category": "MARKETING",
-        "type": "IMAGE",
-        "name": "olddata_t2",
-        "format": "Hi {{1}}!,\n\n🎓 Remember earning your {{2}} with us?\n\nHere’s some exciting news: *95% of learners in our program landed top roles during the last placement season*, with companies like Amazon, Zepto, Zomato, and more!\n\n📢 The Jan/Feb Placement Season is ON! 🚀\nTo help you succeed, Niket, the expert behind your certificate program, has created a Personalized Career Success Roadmap just for you.\n\n*🎯 This roadmap can help you achieve:*\n-Faster career growth\n-Better job opportunities\n-Up to 43% higher salaries!\n\n👉 Click below to access your roadmap now\n | [Create My Success Path,https://certified.learntube.ai/analysis/leaderboard/v2?utm_source=t2_Nov_exp_1&token={{3}}]",
-        "sampleMessage": "Hi [Arjun]!,\n\n🎓 Remember earning your [JAVA] with us?\n\nHere’s some exciting news: *95% of learners in our program landed top roles during the last placement season*, with companies like Amazon, Zepto, Zomato, and more!\n\n📢 The Jan/Feb Placement Season is ON! 🚀\nTo help you succeed, Niket, the expert behind your certificate program, has created a Personalized Career Success Roadmap just for you.\n\n*🎯 This roadmap can help you achieve:*\n-Faster career growth\n-Better job opportunities\n-Up to 43% higher salaries!\n\n👉 Click below to access your roadmap now\n",
-        "actionType": "CAT",
-        "sampleMediaUrl": "4::aW1hZ2UvcG5n:ARaQS68zV6cEJrmsoBXBUOCjzOrt7r0rJTs8oY3mwABm5QSFf5p80Di77SmjyzjmakstUcyO94T_xDFzgCBkVEYW86NDidIJJIKi_S75fU0kYA:e:1738320855:799369954601524:100085341793629:ARbZP7sw6L0cpQie1is",
-        "sampleCTAUrl": "https://certified.learntube.ai/analysis/leaderboard/v2?utm_source=t2_Nov_exp_1&token=events",
-        "isClickTrackingEnabled": true,
-        "footerText": "Limited availability—start your success journey today!",
-        "buttons": [],
-        "parameters": 3,
-        "namespace": "0d6f8068_820f_4f58_b9e8_d67712686fa9",
-        "templateId": "625064316671985",
-        "templateLanguage": "English",
-        "assistantId": "6515621dfe38c80b4d35a1a7",
-        "clientId": "6515621dfe38c80b4d35a19e",
-        "assistantName": "CareerNinja",
-        "partnerId": null,
-        "carouselCards": [],
-        "createdAt": "2025-01-27T10:54:24.033Z",
-        "updatedAt": "2025-01-27T10:54:44.737Z",
-        "__v": 0,
-        "rejectedReason": "NONE",
-        "statusJourney": [
-          {
-            "_id": "679765f44541a40f70802c6c",
-            "status": "APPROVED",
-            "timestamp": "2025-01-27T10:54:44.736Z",
-            "reason": "NONE"
-          }
-        ]
-      }
-    },
-    "status": "LIVE",
-    "type": "API",
-    "assistantId": "6515621dfe38c80b4d35a1a7",
-    "clientId": "6515621dfe38c80b4d35a19e",
-    "messageType": "TEMPLATE",
-    "messageErrors": {
-      "ERR_WA_131049": 347,
-      "ERR_WA_130472": 11,
-      "ERR_WA_131026": 26
-    },
-    "createdAt": "2025-01-27T12:17:03.776Z",
-    "updatedAt": "2025-01-27T12:27:57.101Z",
-    "__v": 0,
-    "audienceCount": 1298,
-    "submittedCount": 1298
-  },
-  {
-    "selectBasis": "homogeneous",
-    "_id": "679767390affff09cb64488e",
-    "createdBy": "agent",
-    "retryCompletedAt": [],
-    "selected": [],
-    "unSelected": [],
-    "retryAttempts": 0,
-    "hasScheduledRetryCampaignTime": [],
-    "manualRetryCreatedAt": [],
-    "manualRetryCompletedAt": [],
-    "name": "nov_14_t2_exp_1",
-    "payload": {
-      "templateName": "olddata_t2",
-      "template": {
-        "_id": "679765e0b750c50c228ffbc4",
-        "status": "APPROVED",
-        "processed": "2025-01-27T10:54:24.023Z",
-        "callToAction": [
-          {
-            "type": "URL",
-            "buttonValue": "https://certified.learntube.ai/analysis/leaderboard/v2?utm_source=t2_Nov_exp_1&token={{3}}",
-            "buttonTitle": "Create My Success Path"
-          }
-        ],
-        "quickReplies": [],
-        "templateParams": [
-          "Arjun",
-          "JAVA"
-        ],
-        "label": "olddata_t2",
-        "category": "MARKETING",
-        "type": "IMAGE",
-        "name": "olddata_t2",
-        "format": "Hi {{1}}!,\n\n🎓 Remember earning your {{2}} with us?\n\nHere’s some exciting news: *95% of learners in our program landed top roles during the last placement season*, with companies like Amazon, Zepto, Zomato, and more!\n\n📢 The Jan/Feb Placement Season is ON! 🚀\nTo help you succeed, Niket, the expert behind your certificate program, has created a Personalized Career Success Roadmap just for you.\n\n*🎯 This roadmap can help you achieve:*\n-Faster career growth\n-Better job opportunities\n-Up to 43% higher salaries!\n\n👉 Click below to access your roadmap now\n | [Create My Success Path,https://certified.learntube.ai/analysis/leaderboard/v2?utm_source=t2_Nov_exp_1&token={{3}}]",
-        "sampleMessage": "Hi [Arjun]!,\n\n🎓 Remember earning your [JAVA] with us?\n\nHere’s some exciting news: *95% of learners in our program landed top roles during the last placement season*, with companies like Amazon, Zepto, Zomato, and more!\n\n📢 The Jan/Feb Placement Season is ON! 🚀\nTo help you succeed, Niket, the expert behind your certificate program, has created a Personalized Career Success Roadmap just for you.\n\n*🎯 This roadmap can help you achieve:*\n-Faster career growth\n-Better job opportunities\n-Up to 43% higher salaries!\n\n👉 Click below to access your roadmap now\n",
-        "actionType": "CAT",
-        "sampleMediaUrl": "4::aW1hZ2UvcG5n:ARaQS68zV6cEJrmsoBXBUOCjzOrt7r0rJTs8oY3mwABm5QSFf5p80Di77SmjyzjmakstUcyO94T_xDFzgCBkVEYW86NDidIJJIKi_S75fU0kYA:e:1738320855:799369954601524:100085341793629:ARbZP7sw6L0cpQie1is",
-        "sampleCTAUrl": "https://certified.learntube.ai/analysis/leaderboard/v2?utm_source=t2_Nov_exp_1&token=events",
-        "isClickTrackingEnabled": true,
-        "footerText": "Limited availability—start your success journey today!",
-        "buttons": [],
-        "parameters": 3,
-        "namespace": "0d6f8068_820f_4f58_b9e8_d67712686fa9",
-        "templateId": "625064316671985",
-        "templateLanguage": "English",
-        "assistantId": "6515621dfe38c80b4d35a1a7",
-        "clientId": "6515621dfe38c80b4d35a19e",
-        "assistantName": "CareerNinja",
-        "partnerId": null,
-        "carouselCards": [],
-        "createdAt": "2025-01-27T10:54:24.033Z",
-        "updatedAt": "2025-01-27T10:54:44.737Z",
-        "__v": 0,
-        "rejectedReason": "NONE",
-        "statusJourney": [
-          {
-            "_id": "679765f44541a40f70802c6c",
-            "status": "APPROVED",
-            "timestamp": "2025-01-27T10:54:44.736Z",
-            "reason": "NONE"
-          }
-        ]
-      }
-    },
-    "status": "LIVE",
-    "type": "API",
-    "assistantId": "6515621dfe38c80b4d35a1a7",
-    "clientId": "6515621dfe38c80b4d35a19e",
-    "messageType": "TEMPLATE",
-    "messageErrors": {
-      "ERR_WA_131049": 299,
-      "ERR_WA_131026": 33,
-      "ERR_WA_130472": 16
-    },
-    "createdAt": "2025-01-27T11:00:09.649Z",
-    "updatedAt": "2025-01-27T11:11:50.756Z",
-    "__v": 0,
-    "audienceCount": 1248,
-    "submittedCount": 1248
-  },
-  {
-    "selectBasis": "homogeneous",
-    "_id": "67926decfec81209e9839fc4",
-    "createdBy": "agent",
-    "retryCompletedAt": [],
-    "selected": [],
-    "unSelected": [],
-    "retryAttempts": 0,
-    "hasScheduledRetryCampaignTime": [],
-    "manualRetryCreatedAt": [],
-    "manualRetryCompletedAt": [],
-    "name": "lessthan50_course_test_jan_6_2",
-    "payload": {
-      "templateName": "unpaid_low_score_coursev5",
-      "template": {
-        "_id": "67926dafeb9f9e0c10ca4cbf",
-        "status": "APPROVED",
-        "processed": "2025-01-23T16:26:23.546Z",
-        "callToAction": [
-          {
-            "type": "URL",
-            "buttonValue": "https://academy.learntube.ai/CareerNinjaAcademy/{{4}}/course-detail?utm_source=unpaidlow2",
-            "buttonTitle": "Get Certified Course"
-          }
-        ],
-        "quickReplies": [],
-        "templateParams": [
-          "Arjun",
-          "50",
-          "Java"
-        ],
-        "label": "unpaid_low_score_coursev5",
-        "category": "MARKETING",
-        "type": "FILE",
-        "name": "unpaid_low_score_coursev5",
-        "format": "Hi {{1}},\n\n*I see you scored {{2}}% in {{3}}, and you're really close to mastering this skill! *\n\nTo help you take the next step, we’ve created a 7-day course just for you. \n\nIt’ll help you focus on the areas where you need improvement, and once you complete it, you’ll automatically receive your certificate.\n\n*Along with the course you will also get a report card that highlights what you’re great at and where you can improve. *This way, you’ll know exactly what to focus on. \n\nMcKinsey has named this one of the most valuable skills of 2025, and you're on the right path to mastering it.\n\n*Click on the button below to get your course.* | [Get Certified Course,https://academy.learntube.ai/CareerNinjaAcademy/{{4}}/course-detail?utm_source=unpaidlow2]",
-        "sampleMessage": "Hi [Arjun],\n\n*I see you scored [50]% in [Java], and you're really close to mastering this skill! *\n\nTo help you take the next step, we’ve created a 7-day course just for you. \n\nIt’ll help you focus on the areas where you need improvement, and once you complete it, you’ll automatically receive your certificate.\n\n*Along with the course you will also get a report card that highlights what you’re great at and where you can improve. *This way, you’ll know exactly what to focus on. \n\nMcKinsey has named this one of the most valuable skills of 2025, and you're on the right path to mastering it.\n\n*Click on the button below to get your course.*",
-        "actionType": "CAT",
-        "sampleMediaUrl": "4::YXBwbGljYXRpb24vcGRm:ARYUGaxKl7dceFbBI_1nStwFuZR2i4yQFldyTGHG-TUUfC7o0QmkC4muyYb1fQ8iCJprA6zQcM1j8EsFwNNQPO_PcPHv4HjSO9GaM6tRE7Yovg:e:1737995170:799369954601524:100085341793629:ARYPj_8qsxGzZZxcmaY",
-        "sampleCTAUrl": "https://academy.learntube.ai/CareerNinjaAcademy/events/course-detail?utm_source=unpaidlow2",
-        "isClickTrackingEnabled": true,
-        "buttons": [],
-        "parameters": 4,
-        "namespace": "0d6f8068_820f_4f58_b9e8_d67712686fa9",
-        "templateId": "1158375462588042",
-        "templateLanguage": "English",
-        "assistantId": "6515621dfe38c80b4d35a1a7",
-        "clientId": "6515621dfe38c80b4d35a19e",
-        "assistantName": "CareerNinja",
-        "partnerId": null,
-        "carouselCards": [],
-        "createdAt": "2025-01-23T16:26:23.550Z",
-        "updatedAt": "2025-01-23T16:26:28.561Z",
-        "__v": 0,
-        "rejectedReason": "NONE",
-        "statusJourney": [
-          {
-            "_id": "67926db4d547d30f85f1c6e5",
-            "status": "APPROVED",
-            "timestamp": "2025-01-23T16:26:28.561Z",
-            "reason": "NONE"
-          }
-        ]
-      }
-    },
-    "status": "LIVE",
-    "type": "API",
-    "assistantId": "6515621dfe38c80b4d35a1a7",
-    "clientId": "6515621dfe38c80b4d35a19e",
-    "messageType": "TEMPLATE",
-    "messageErrors": {
-      "ERR_WA_131026": 6,
-      "ERR_WA_131049": 27,
-      "ERR_WA_130472": 2
-    },
-    "createdAt": "2025-01-23T16:27:24.721Z",
-    "updatedAt": "2025-01-24T05:56:19.149Z",
-    "__v": 0,
-    "audienceCount": 111,
-    "submittedCount": 111
-  },
-  {
-    "selectBasis": "homogeneous",
-    "_id": "6792407b0e294a09cae4549e",
-    "createdBy": "agent",
-    "retryCompletedAt": [],
-    "selected": [],
-    "unSelected": [],
-    "retryAttempts": 0,
-    "hasScheduledRetryCampaignTime": [],
-    "manualRetryCreatedAt": [],
-    "manualRetryCompletedAt": [],
-    "name": "lessthan50_course_test_jan_6",
-    "payload": {
-      "templateName": "unpaid_low_score_coursev4",
-      "template": {
-        "_id": "67923180b9611c70da2e3a2f",
-        "status": "APPROVED",
-        "processed": "2025-01-23T12:09:36.236Z",
-        "callToAction": [
-          {
-            "type": "URL",
-            "buttonValue": "https://academy.learntube.ai/CareerNinjaAcademy/SQL/course-detail?utm_source=unpaidlow2",
-            "buttonTitle": "Get Certified Course"
-          }
-        ],
-        "quickReplies": [],
-        "templateParams": [
-          "Arjun",
-          "50",
-          "Java"
-        ],
-        "label": "unpaid_low_score_coursev4",
-        "category": "MARKETING",
-        "type": "FILE",
-        "name": "unpaid_low_score_coursev4",
-        "format": "Hi {{1}},\n\n*I see you scored {{2}}% in {{3}}, and you're really close to mastering this skill! *\n\nTo help you take the next step, we’ve created a 7-day course just for you. \n\nIt’ll help you focus on the areas where you need improvement, and once you complete it, you’ll automatically receive your certificate.\n\n*Along with the course you will also get a report card that highlights what you’re great at and where you can improve. *This way, you’ll know exactly what to focus on. \n\nMcKinsey has named this one of the most valuable skills of 2025, and you're on the right path to mastering it.\n\n*Click on the button below to get your course.* | [Get Certified Course,https://academy.learntube.ai/CareerNinjaAcademy/SQL/course-detail?utm_source=unpaidlow2]",
-        "sampleMessage": "Hi [Arjun],\n\n*I see you scored [50]% in [Java], and you're really close to mastering this skill! *\n\nTo help you take the next step, we’ve created a 7-day course just for you. \n\nIt’ll help you focus on the areas where you need improvement, and once you complete it, you’ll automatically receive your certificate.\n\n*Along with the course you will also get a report card that highlights what you’re great at and where you can improve. *This way, you’ll know exactly what to focus on. \n\nMcKinsey has named this one of the most valuable skills of 2025, and you're on the right path to mastering it.\n\n*Click on the button below to get your course.*",
-        "actionType": "CAT",
-        "sampleMediaUrl": "4::YXBwbGljYXRpb24vcGRm:ARYmFJBWxSNttWLlpWz6Qk19vCTAsjuUkP62fcUfxiUyD0j3mXeaLedlDn-mX83_AvBFtozibvyKjdz9Cb8bgkoLk1H6L3kezbF5cDNQhy1jVQ:e:1737979769:799369954601524:100085341793629:ARbZ2GzsB6ROvXkYfWQ",
-        "sampleCTAUrl": "",
-        "isClickTrackingEnabled": true,
-        "buttons": [],
-        "parameters": 3,
-        "namespace": "0d6f8068_820f_4f58_b9e8_d67712686fa9",
-        "templateId": "958866175721322",
-        "templateLanguage": "English",
-        "assistantId": "6515621dfe38c80b4d35a1a7",
-        "clientId": "6515621dfe38c80b4d35a19e",
-        "assistantName": "CareerNinja",
-        "partnerId": null,
-        "carouselCards": [],
-        "createdAt": "2025-01-23T12:09:36.239Z",
-        "updatedAt": "2025-01-23T12:10:02.016Z",
-        "__v": 0,
-        "rejectedReason": "NONE",
-        "statusJourney": [
-          {
-            "_id": "6792319ab30f120f92e5592a",
-            "status": "APPROVED",
-            "timestamp": "2025-01-23T12:10:02.016Z",
-            "reason": "NONE"
-          }
-        ]
-      }
-    },
-    "status": "LIVE",
-    "type": "API",
-    "assistantId": "6515621dfe38c80b4d35a1a7",
-    "clientId": "6515621dfe38c80b4d35a19e",
-    "messageType": "TEMPLATE",
-    "createdAt": "2025-01-23T13:13:31.657Z",
-    "updatedAt": "2025-01-23T13:13:31.657Z",
-    "__v": 0
-  },
-  {
-    "selectBasis": "homogeneous",
-    "_id": "67922c8e17b2b709cad65481",
-    "createdBy": "agent",
-    "retryCompletedAt": [],
-    "selected": [],
-    "unSelected": [],
-    "retryAttempts": 0,
-    "hasScheduledRetryCampaignTime": [],
-    "manualRetryCreatedAt": [],
-    "manualRetryCompletedAt": [],
-    "name": "lessthan60_course_test2_jan_5",
-    "payload": {
-      "templateName": "lessthan60_course_test2",
-      "template": {
-        "_id": "67922aa17976db0c16c4ab50",
-        "status": "APPROVED",
-        "processed": "2025-01-23T11:40:17.022Z",
-        "callToAction": [
-          {
-            "type": "URL",
-            "buttonValue": "https://academy.learntube.ai/CareerNinjaAcademy/{{5}}/course-detail?utm_source=Unpaidlow",
-            "buttonTitle": "Enroll in Your Certified "
-          }
-        ],
-        "quickReplies": [],
-        "templateParams": [
-          "Arjun",
-          "50",
-          "Java",
-          "Java"
-        ],
-        "label": "lessthan60_course_test2",
-        "category": "MARKETING",
-        "type": "FILE",
-        "name": "lessthan60_course_test2",
-        "format": "*🎉 Your Personalized Report Card Is Ready!*\n\nHi {{1}},\nI see you scored *{{2}}% in {{3}}*, and you're so close to mastering this valuable skill!\n\nTo help you take the next step, we’ve created a 7-day course just for you.\n\n*✅ Why Join?*\n\n-Focus on areas where you can improve.\n-Earn your certificate upon completion.\n-Get a detailed report card highlighting your strengths and growth opportunities.\n\nThis way, you’ll know exactly what to work on to accelerate your  progress.\n\n*🌟 Did You Know?*\nMcKinsey has named {{4}} as one of the most valuable skills of 2025and you’re on the right track to mastering it!\n\n📌 Click on the button below to get started:\n\nHurry last 15 Slots available !!! | [Enroll in Your Certified ,https://academy.learntube.ai/CareerNinjaAcademy/{{5}}/course-detail?utm_source=Unpaidlow]",
-        "sampleMessage": "*🎉 Your Personalized Report Card Is Ready!*\n\nHi [Arjun],\nI see you scored *[50]% in [Java]*, and you're so close to mastering this valuable skill!\n\nTo help you take the next step, we’ve created a 7-day course just for you.\n\n*✅ Why Join?*\n\n-Focus on areas where you can improve.\n-Earn your certificate upon completion.\n-Get a detailed report card highlighting your strengths and growth opportunities.\n\nThis way, you’ll know exactly what to work on to accelerate your  progress.\n\n*🌟 Did You Know?*\nMcKinsey has named [Java] as one of the most valuable skills of 2025and you’re on the right track to mastering it!\n\n📌 Click on the button below to get started:\n\nHurry last 15 Slots available !!!",
-        "actionType": "CAT",
-        "sampleMediaUrl": "4::YXBwbGljYXRpb24vcGRm:ARa_sKu9VUr5FIw63fWYQhX7Kg37SlqUSNGeEYUGNH7hvH3MYT3TJX0OH5vsBnjn-kHg8ZP0_O8WKgvTpU1DxRoIni6YseS16q3AYzviJBpmYQ:e:1737978006:799369954601524:100085341793629:ARaaZuR2mZmyWqCb04E",
-        "sampleCTAUrl": "https://academy.learntube.ai/CareerNinjaAcademy/events/course-detail?utm_source=Unpaidlow",
-        "isClickTrackingEnabled": true,
-        "footerText": "Refer to the PDF for your Report Card",
-        "buttons": [],
-        "parameters": 5,
-        "namespace": "0d6f8068_820f_4f58_b9e8_d67712686fa9",
-        "templateId": "509397431668616",
-        "templateLanguage": "English",
-        "assistantId": "6515621dfe38c80b4d35a1a7",
-        "clientId": "6515621dfe38c80b4d35a19e",
-        "assistantName": "CareerNinja",
-        "partnerId": null,
-        "carouselCards": [],
-        "createdAt": "2025-01-23T11:40:17.025Z",
-        "updatedAt": "2025-01-23T11:40:21.430Z",
-        "__v": 0,
-        "rejectedReason": "NONE",
-        "statusJourney": [
-          {
-            "_id": "67922aa5685aa10f98d943ab",
-            "status": "APPROVED",
-            "timestamp": "2025-01-23T11:40:21.430Z",
-            "reason": "NONE"
-          }
-        ]
-      }
-    },
-    "status": "LIVE",
-    "type": "API",
-    "assistantId": "6515621dfe38c80b4d35a1a7",
-    "clientId": "6515621dfe38c80b4d35a19e",
-    "messageType": "TEMPLATE",
-    "messageErrors": {
-      "ERR_WA_131049": 74,
-      "ERR_WA_131026": 24,
-      "ERR_WA_130472": 6
-    },
-    "createdAt": "2025-01-23T11:48:30.747Z",
-    "updatedAt": "2025-01-23T12:23:15.609Z",
-    "__v": 0,
-    "audienceCount": 561,
-    "submittedCount": 561
-  },
-  {
-    "selectBasis": "homogeneous",
-    "_id": "67922ab90e294a09cae446de",
-    "createdBy": "agent",
-    "retryCompletedAt": [],
-    "selected": [],
-    "unSelected": [],
-    "retryAttempts": 0,
-    "hasScheduledRetryCampaignTime": [],
-    "manualRetryCreatedAt": [],
-    "manualRetryCompletedAt": [],
-    "name": "morethan60_course_test_jan_5",
-    "payload": {
-      "templateName": "morethan60_course_test",
-      "template": {
-        "_id": "67922a0fd9661b0cca4a8e67",
-        "status": "APPROVED",
-        "processed": "2025-01-23T11:37:51.503Z",
-        "callToAction": [],
-        "quickReplies": [],
-        "templateParams": [
-          "Arjun",
-          "Arjun",
-          "80",
-          "Java"
-        ],
-        "label": "morethan60_course_test",
-        "category": "MARKETING",
-        "type": "IMAGE",
-        "name": "morethan60_course_test",
-        "format": "🎉 Congratulations, {{1}}!\n\nHi {{2}},\nYou scored *{{3}}% in {{4}} 🌟* and have earned the opportunity to work with our industry-leading mentor Niket on a personalized roadmap tailored to your career goals.\n\n*✅ Why This Matters:*\nNiket has helped 2,300 learners achieve their dream roles, and now it’s your turn!\n\n*Here’s how your roadmap will help:*\n🎓 Courses: Build top-notch skills and gain certifications.\n💼 Placements: Receive complete guidance to land your ideal job.\n🚀 Courses + Placements: Identify gaps, upskill, and secure your future.\n\n👇 Click on the buttons below to choose your roadmap\n",
-        "sampleMessage": "🎉 Congratulations, [Arjun]!\n\nHi [Arjun],\nYou scored *[80]% in [Java] 🌟* and have earned the opportunity to work with our industry-leading mentor Niket on a personalized roadmap tailored to your career goals.\n\n*✅ Why This Matters:*\nNiket has helped 2,300 learners achieve their dream roles, and now it’s your turn!\n\n*Here’s how your roadmap will help:*\n🎓 Courses: Build top-notch skills and gain certifications.\n💼 Placements: Receive complete guidance to land your ideal job.\n🚀 Courses + Placements: Identify gaps, upskill, and secure your future.\n\n👇 Click on the buttons below to choose your roadmap\n",
-        "actionType": "All",
-        "sampleMediaUrl": "4::aW1hZ2UvcG5n:ARaoB8oUvCP7q52_auLn2zsstoWXTLAQdTCGvK402CiTTtmawwxrbI419lgBWfgNtPKPm8FQMeVoW40YNOQkMOK297dzI-7nNKR60eZuwC_Jpw:e:1737977864:799369954601524:100085341793629:ARbtWWwocvLLe3Oscyk",
-        "sampleCTAUrl": "",
-        "isClickTrackingEnabled": true,
-        "footerText": " Hurry Links Valid for the next 6 hours only !!",
-        "buttons": [
-          {
-            "type": "URL",
-            "text": "Learning Only Roadmap",
-            "url": "https://ai-sensy.co/tck/{{1}}",
-            "example": [
-              "https://ai-sensy.co/tck/ywEeMF"
-            ],
-            "urlMetadata": {
-              "url": "https://academy.learntube.ai/CareerNinjaAcademy/{{1}}/course-detail?utm_source=Unpaid",
-              "parameters": [
-                "https://academy.learntube.ai/CareerNinjaAcademy/events/course-detail?utm_source=Unpaid"
-              ]
-            }
-          },
-          {
-            "type": "QUICK_REPLY",
-            "text": "Placement By Learning "
-          },
-          {
-            "type": "QUICK_REPLY",
-            "text": "Placement Roadmap"
-          }
-        ],
-        "parameters": 4,
-        "namespace": "0d6f8068_820f_4f58_b9e8_d67712686fa9",
-        "templateId": "2065940090539256",
-        "templateLanguage": "English",
-        "assistantId": "6515621dfe38c80b4d35a1a7",
-        "clientId": "6515621dfe38c80b4d35a19e",
-        "assistantName": "CareerNinja",
-        "partnerId": null,
-        "carouselCards": [],
-        "createdAt": "2025-01-23T11:37:51.507Z",
-        "updatedAt": "2025-01-23T11:39:27.673Z",
-        "__v": 0,
-        "rejectedReason": "NONE",
-        "statusJourney": [
-          {
-            "_id": "67922a6f2e4d550f88fcde03",
-            "status": "APPROVED",
-            "timestamp": "2025-01-23T11:39:27.672Z",
-            "reason": "NONE"
-          }
-        ]
-      }
-    },
-    "status": "LIVE",
-    "type": "API",
-    "assistantId": "6515621dfe38c80b4d35a1a7",
-    "clientId": "6515621dfe38c80b4d35a19e",
-    "messageType": "TEMPLATE",
-    "messageErrors": {
-      "ERR_WA_131049": 154,
-      "ERR_WA_131026": 18,
-      "ERR_WA_130472": 4
-    },
-    "createdAt": "2025-01-23T11:40:41.198Z",
-    "updatedAt": "2025-01-23T12:23:13.133Z",
-    "__v": 0,
-    "audienceCount": 807,
-    "submittedCount": 807
-  },
-  {
-    "selectBasis": "homogeneous",
-    "_id": "6792279b6e3bf809cc95bdfa",
-    "createdBy": "agent",
-    "retryCompletedAt": [],
-    "selected": [],
-    "unSelected": [],
-    "retryAttempts": 0,
-    "hasScheduledRetryCampaignTime": [],
-    "manualRetryCreatedAt": [],
-    "manualRetryCompletedAt": [],
-    "name": "lessthan60_course_test_5_jan",
-    "payload": {
-      "templateName": "lessthan60_course_test",
-      "template": {
-        "_id": "6792270dd9661b0cca4a3b5a",
-        "status": "APPROVED",
-        "processed": "2025-01-23T11:25:01.568Z",
-        "callToAction": [
-          {
-            "type": "URL",
-            "buttonValue": "https://academy.learntube.ai/CareerNinjaAcademy/{{5}}/course-detail",
-            "buttonTitle": "Enroll in Your Certified "
-          }
-        ],
-        "quickReplies": [],
-        "templateParams": [
-          "Arjun",
-          "50",
-          "Java",
-          "Java"
-        ],
-        "label": "lessthan60_course_test",
-        "category": "MARKETING",
-        "type": "FILE",
-        "name": "lessthan60_course_test",
-        "format": "*🎉 Your Personalized Report Card Is Ready!*\n\nHi {{1}},\nI see you scored *{{2}}% in {{3}}*, and you're so close to mastering this valuable skill!\n\nTo help you take the next step, we’ve created a 7-day course just for you.\n\n*✅ Why Join?*\n\n-Focus on areas where you can improve.\n-Earn your certificate upon completion.\n-Get a detailed report card highlighting your strengths and growth opportunities.\n\nThis way, you’ll know exactly what to work on to accelerate your  progress.\n\n*🌟 Did You Know?*\nMcKinsey has named {{4}} as one of the most valuable skills of 2025and you’re on the right track to mastering it!\n\n📌 Click on the button below to get started:\n\nHurry last 15 Slots available !!! | [Enroll in Your Certified ,https://academy.learntube.ai/CareerNinjaAcademy/{{5}}/course-detail]",
-        "sampleMessage": "*🎉 Your Personalized Report Card Is Ready!*\n\nHi [Arjun],\nI see you scored *[50]% in [Java]*, and you're so close to mastering this valuable skill!\n\nTo help you take the next step, we’ve created a 7-day course just for you.\n\n*✅ Why Join?*\n\n-Focus on areas where you can improve.\n-Earn your certificate upon completion.\n-Get a detailed report card highlighting your strengths and growth opportunities.\n\nThis way, you’ll know exactly what to work on to accelerate your  progress.\n\n*🌟 Did You Know?*\nMcKinsey has named [Java] as one of the most valuable skills of 2025and you’re on the right track to mastering it!\n\n📌 Click on the button below to get started:\n\nHurry last 15 Slots available !!!",
-        "actionType": "CAT",
-        "sampleMediaUrl": "4::YXBwbGljYXRpb24vcGRm:ARY1xlLFIUIIedvCC2XohwcHGpPkMVzyVgv4NtmNy8kh6lJkNZ0t2FYFAOsp26oRppeZcaG8tEaseSZ8uFll1fIQZOjaRFxgYZ6LBiiyJ0FeJw:e:1737977095:799369954601524:100085341793629:ARZZtvJnutCUwxWENow",
-        "sampleCTAUrl": "https://academy.learntube.ai/CareerNinjaAcademy/events/course-detail",
-        "isClickTrackingEnabled": true,
-        "footerText": "Refer to the PDF for your Report Card",
-        "buttons": [],
-        "parameters": 5,
-        "namespace": "0d6f8068_820f_4f58_b9e8_d67712686fa9",
-        "templateId": "594540339991517",
-        "templateLanguage": "English",
-        "assistantId": "6515621dfe38c80b4d35a1a7",
-        "clientId": "6515621dfe38c80b4d35a19e",
-        "assistantName": "CareerNinja",
-        "partnerId": null,
-        "carouselCards": [],
-        "createdAt": "2025-01-23T11:25:01.570Z",
-        "updatedAt": "2025-01-23T11:25:24.248Z",
-        "__v": 0,
-        "rejectedReason": "NONE",
-        "statusJourney": [
-          {
-            "_id": "67922724685aa10f98d93a28",
-            "status": "APPROVED",
-            "timestamp": "2025-01-23T11:25:24.247Z",
-            "reason": "NONE"
-          }
-        ]
-      }
-    },
-    "status": "LIVE",
-    "type": "API",
-    "assistantId": "6515621dfe38c80b4d35a1a7",
-    "clientId": "6515621dfe38c80b4d35a19e",
-    "messageType": "TEMPLATE",
-    "messageErrors": {
-      "ERR_WA_131049": 1
-    },
-    "createdAt": "2025-01-23T11:27:23.080Z",
-    "updatedAt": "2025-01-23T11:41:53.405Z",
-    "__v": 0,
-    "audienceCount": 2,
-    "submittedCount": 2
   }
 ]
