@@ -88,7 +88,7 @@ app.listen(PORT, () => {
 async function login() {
   console.log('Starting login process...');
   const browser = await chromium.launch({ 
-    headless: false, // Change to true for server environments
+    headless: true, // Change to true for server environments
     args: [
       '--no-sandbox',
       '--disable-setuid-sandbox',
