@@ -34,7 +34,7 @@ app.get('/campaigns', async (req, res) => {
       // Check if we need to login first
       if (!isSessionValid()) {
         console.log('API: No valid session, performing login first');
-        await login();
+        await login(false);
         console.log('API: Login successful, proceeding with scraping...');
       }
       
@@ -85,7 +85,7 @@ app.listen(PORT, () => {
   console.log(`Campaigns API available at http://localhost:${PORT}/campaigns`);
 });
 
-async function login() {
+async function login(scrapeAfterLogin = true) {
   console.log('Starting login process...');
   const browser = await chromium.launch({ 
     headless: true, // Change to true for server environments
@@ -198,8 +198,13 @@ async function login() {
     
     console.log('Session saved, will expire at:', expiryTime);
     
-    // After login, immediately scrape campaign information
-    await scrapeCampaignDetails(context);
+    // After login, conditionally scrape campaign information
+    if (scrapeAfterLogin) {
+      console.log('Auto-scraping campaign details after login...');
+      await scrapeCampaignDetails(context);
+    } else {
+      console.log('Skipping auto-scrape after login (will be handled by caller)');
+    }
 
   } catch (error) {
     console.error('Login failed:', error);
@@ -508,7 +513,7 @@ async function scrapeCampaignDetails() {
           // Instead of throwing an error, attempt to login and retry
           console.log('Attempting to login and retry...');
           try {
-            await login(); // Perform login again
+            await login(false); // Prevent duplicate scraping
             console.log('Login successful after session expiry, retrying campaign fetch...');
             // Retry scraping campaign details after successful login
             return await scrapeCampaignDetails();
@@ -571,7 +576,7 @@ cron.schedule('35 18 * * *', async () => {
       // Check session validity before scraping
       if (!isSessionValid()) {
         console.log('Cron Job: Session invalid or expired, performing login first...');
-        await login(); // Attempt to login
+        await login(false); // Prevent duplicate scraping
         // After successful login, proceed to scrape
         console.log('Cron Job: Login successful, proceeding with scraping...');
         await scrapeCampaignDetails();
@@ -618,7 +623,7 @@ console.log('Server started, initializing first campaign detail check...');
         await scrapeCampaignDetails();
       } else {
         console.log('No valid session found, logging in...');
-        await login();
+        await login(false); // Prevent duplicate scraping
         // After successful login, scrape campaign details
         console.log('Initial login successful, scraping campaign details...');
         await scrapeCampaignDetails();
@@ -668,7 +673,7 @@ app.get('/api/cron-check', async (req, res) => {
       // Check if we need to login first
       if (!isSessionValid()) {
         console.log('Cron API: No valid session, performing login first');
-        await login();
+        await login(false); // Prevent duplicate scraping
         console.log('Cron API: Login successful, proceeding with scraping...');
       }
       
