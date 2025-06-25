@@ -11,6 +11,32 @@ const { sendCsvToSlack, sendToGoogleSheets } = require('./send-to-slack');
 const { google } = require('googleapis');
 const sheets = google.sheets('v4');
 
+// Browser installation check for deployment environments
+async function checkBrowserInstallation() {
+  try {
+    console.log('Checking Playwright browser installation...');
+    const { execSync } = require('child_process');
+    execSync('npx playwright --version', { stdio: 'pipe' });
+    console.log('Playwright browsers are available');
+    return true;
+  } catch (error) {
+    console.log('Playwright browsers not found, attempting to install...');
+    try {
+      const { execSync } = require('child_process');
+      execSync('npx playwright install chromium --with-deps', { stdio: 'inherit' });
+      console.log('Playwright browsers installed successfully');
+      return true;
+    } catch (installError) {
+      console.log('Failed to install Playwright browsers:', installError.message);
+      console.log('This is normal in some deployment environments');
+      return false;
+    }
+  }
+}
+
+// Initialize browser check on startup
+checkBrowserInstallation().catch(console.error);
+
 const STORAGE_STATE_PATH = path.join(__dirname, 'auth.json');
 const SESSION_EXPIRY_PATH = path.join(__dirname, 'session-expiry.json');
 const SLACK_CAMPAIGN_WEBHOOK_URL = 'YOUR_SLACK_WEBHOOK_URL_HERE'; // TODO: Replace with actual webhook URL
@@ -137,7 +163,9 @@ app.listen(PORT, () => {
 
 async function login(scrapeAfterLogin = true) {
   console.log('Starting login process...');
-  const browser = await chromium.launch({ 
+  
+  // Enhanced browser launch options for deployment environments
+  const browserOptions = {
     headless: true,
     args: [
       '--no-sandbox',
@@ -146,9 +174,29 @@ async function login(scrapeAfterLogin = true) {
       '--disable-gpu',
       '--disable-accelerated-2d-canvas',
       '--disable-dev-profile',
-      '--window-size=1920,1080'
+      '--window-size=1920,1080',
+      '--disable-web-security',
+      '--disable-features=VizDisplayCompositor'
     ]
-  });
+  };
+
+  // Add executable path for deployment environments if needed
+  if (process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH) {
+    browserOptions.executablePath = process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH;
+  }
+
+  let browser;
+  try {
+    browser = await chromium.launch(browserOptions);
+  } catch (error) {
+    console.error('Failed to launch browser:', error.message);
+    console.log('Trying with system browser...');
+    browser = await chromium.launch({
+      ...browserOptions,
+      channel: 'chrome' // Try using system Chrome
+    });
+  }
+
   const context = await browser.newContext({
     viewport: { width: 1920, height: 1080 },
     userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'

@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: aisensy-campaign-scraper
+    env: node
+    plan: starter
+    buildCommand: |
+      npm install
+      npx playwright install chromium --with-deps || echo "Browser installation skipped"
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000 
