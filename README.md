@@ -72,4 +72,4 @@ The application supports two methods for sending data to Slack:
 
 2. **Webhook Method**:
    - Requires only `SLACK_WEBHOOK_URL`
-   - Sends data as a formatted message to the webhook's channel 
+   - Sends data as a formatted message to the webhook's channel
