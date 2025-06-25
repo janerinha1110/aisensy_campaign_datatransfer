@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const axios = require('axios');
 const FormData = require('form-data');
+const { google } = require('googleapis');
 
 const CAMPAIGN_DETAILS_CSV_PATH = path.join(__dirname, 'campaign-details.csv');
 const RATE_LIMIT_LOG_PATH = path.join(__dirname, 'rate-limit-log.txt');
@@ -176,6 +177,43 @@ function logRateLimit(message) {
   }
 }
 
+async function sendToGoogleSheets(csvFilePath, spreadsheetId) {
+  try {
+    // Read the CSV file
+    const csvContent = fs.readFileSync(csvFilePath, 'utf-8');
+    const rows = csvContent.split('\n').map(row => row.split(','));
+
+    // Initialize Google Sheets API
+    const auth = new google.auth.GoogleAuth({
+      keyFile: 'google-credentials.json',
+      scopes: ['https://www.googleapis.com/auth/spreadsheets'],
+    });
+
+    const sheets = google.sheets({ version: 'v4', auth });
+
+    // Clear existing content
+    await sheets.spreadsheets.values.clear({
+      spreadsheetId,
+      range: 'Sheet1!A1:Z1000',
+    });
+
+    // Write new data
+    await sheets.spreadsheets.values.update({
+      spreadsheetId,
+      range: 'Sheet1!A1',
+      valueInputOption: 'RAW',
+      resource: {
+        values: rows,
+      },
+    });
+
+    console.log('Data successfully written to Google Sheets');
+  } catch (error) {
+    console.error('Error writing to Google Sheets:', error);
+    throw error;
+  }
+}
+
 // Execute the function if this script is run directly
 if (require.main === module) {
   sendCsvToSlack()
@@ -188,4 +226,4 @@ if (require.main === module) {
     });
 }
 
-module.exports = sendCsvToSlack; 
+module.exports = { sendCsvToSlack, sendToGoogleSheets }; 

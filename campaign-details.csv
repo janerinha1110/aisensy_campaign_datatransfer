@@ -1,0 +1,12 @@
+Campaign,17 June,,,18 June,,,19 June,,,20 June,,,21 June,,,22 June,,,23 June,,,24 June,,
+,sent,Delivered,failed,sent,Delivered,failed,sent,Delivered,failed,sent,Delivered,failed,sent,Delivered,failed,sent,Delivered,failed,sent,Delivered,failed,sent,Delivered,failed
+hr_initial_screening_reminder_started_v1,3,3,0,2,2,0,5,5,0,0,0,0,11,10,1,1,1,0,3,3,0,6,6,0
+certified_day_0_goal_not_given_v2,,,,,,,42,42,0,134,130,0,112,114,0,135,131,2,145,145,0,173,169,2
+certified_fallback_post_payment_course_bundles_utility_v1,,,,,,,144,138,2,147,146,4,138,136,2,150,138,8,123,123,2,216,204,8
+payment_failed_reminder_fallback_v6,1567,1508,32,1532,1484,46,1390,1346,23,1435,1357,47,1971,1837,68,2401,2275,75,2001,1911,57,2099,2014,66
+certificate_delivery_June,443,431,7,420,412,7,379,366,5,371,361,8,402,398,6,380,365,14,415,397,10,446,434,10
+advanced_day5_uti,401,187,207,352,176,175,370,160,207,415,155,261,401,132,270,425,141,275,400,150,245,365,116,243
+followup_certified_fallback_v_20_experiment_low_v1,721,560,150,686,534,148,675,495,179,702,522,175,915,639,270,1040,767,272,976,715,254,882,617,263
+unpaid_course_testing_v1_40_50_3,330,219,103,313,218,92,302,206,94,287,190,90,307,207,91,293,187,100,319,216,101,308,195,104
+unpaid_course_testing_v1_0_30_2,257,185,70,229,154,71,212,151,53,211,155,49,250,176,70,230,147,81,215,141,69,252,174,60
+unpaid_course_testing_v1_all_2,137,85,45,123,90,35,141,96,46,114,78,35,124,65,57,132,84,47,121,68,45,140,97,42
