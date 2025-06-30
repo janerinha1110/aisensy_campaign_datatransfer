@@ -6,9 +6,10 @@
   "scripts": {
     "start": "node index.js",
     "api": "node api.js",
+    "external-api": "node external-cron-client.js",
+    "trigger-cron": "node trigger-cron.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "echo \"Skipping Playwright browser installation for deployment\"",
-    "install-browsers": "npx playwright install chromium --with-deps",
+    "postinstall": "npx playwright install chromium --with-deps",
     "send-to-slack": "node send-to-slack.js"
   },
   "keywords": [
