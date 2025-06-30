@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # AISensy Campaign Details Scraper
 
 This project automatically scrapes campaign details from the AISensy dashboard, processes them, and sends the data to Slack.
@@ -72,4 +73,8 @@ The application supports two methods for sending data to Slack:
 
 2. **Webhook Method**:
    - Requires only `SLACK_WEBHOOK_URL`
-   - Sends data as a formatted message to the webhook's channel
+   - Sends data as a formatted message to the webhook's channel 
+=======
+# aisensy_campaign_datatransfer
+daily data transfer of campaign stats
+>>>>>>> b440b473502c87c5ca6d6ce23b1d1bc2688eb0f1
